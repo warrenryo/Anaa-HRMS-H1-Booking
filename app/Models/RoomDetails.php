@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Reviews\ReviewModel;
 use App\Models\RoomImages;
 use App\Models\RoomPricing;
 use Illuminate\Database\Eloquent\Model;
@@ -28,5 +29,9 @@ class RoomDetails extends Model
 
     public function roomPrice(){
         return $this->hasOne(RoomPricing::class, 'room_type_id', 'id');
+    }
+
+    public function roomReviews(){
+        return $this->hasMany(ReviewModel::class, 'room_id', 'id');
     }
 }

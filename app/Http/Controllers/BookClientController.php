@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Rules\Password;
 use App\Models\User;
 use App\Models\RoomDetails;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Auth\Events\Registered;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -19,7 +20,7 @@ class BookClientController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Password::defaults()],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $client_code = mt_rand(10000, 99999);
@@ -40,6 +41,19 @@ class BookClientController extends Controller
         ]);
 
         event(new Registered($client));
+
+        if($client){
+            Http::post('http://192.168.101.75:8000/api/get-h1-users',[
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'role' => $role,
+                'user_code' => $client_code
+            ]);
+        }
+        
+        
+
         Alert::success('Success!', 'Client has been assigned on Room '.$client->room_no.'');
         return redirect()->back();
     }
@@ -82,6 +96,8 @@ class BookClientController extends Controller
         ]);
         event(new Registered($client));
         if($client){
+           
+            $no_request = json_encode(['No Requests']);
             $client->guestInfo()->create([
                 'user_id' => $client->id,
                 'client_password' => $pass,
@@ -89,10 +105,9 @@ class BookClientController extends Controller
                 'child_no' => $request->child_no,
                 'contact_no' => $request->contact_no,
                 'guest_id' => $request->guest_id,
-                'id_number' => $request->id_number,
-                'room_type' => $request->room_type,
+                'room_type' => $request->room_type, 
                 'room_number' => $request->room_no,
-                'room_service' => json_encode($request->special_request),
+                'room_service' => ($request['special_request'] == null) ? $no_request : json_encode($request['special_request']),
                 'special_request' => $request->additional_request,
                 'per_stay' => $request->per_stay,
                 'checkin' => $request->checkin,
@@ -100,6 +115,34 @@ class BookClientController extends Controller
                 'price' => $request->total_amount,
                 'status' => $status
             ]);
+            //API FOR HOUSEKEEPING H3
+            Http::post('https://h3-housekeeping.anaa-hrms.com/api/get-h1-users',[
+                'name' => $client->name,
+                'email' => $client->email,
+                'password' => $pass,
+                'role' => $role,
+                'user_code' => $client_code,
+                'room_no' => $request->room_no
+            ]);
+            //API FOR RESTAURANT 5
+            Http::post('https://r5-integ-online.anaa-hrms.com/api/get-users', [
+                'name' => $client->name,
+                'email' => $client->email,
+                'password' => $pass,
+                'role' => $role,
+                'user_code' => $client_code,
+                'room_no' => $request->room_no
+            ]);
+            //API FOR RESTAURANT 3 PAAYMENTT
+            Http::post('https://r3-billing.anaa-hrms.com/api/get-h1-users',[
+                'name' => $client->name,
+                'email' => $client->email,
+                'password' => $pass,
+                'role' => $role,
+                'user_code' => $client_code,
+                'room_no' => $request->room_no
+            ]);
+            
             $update_room = RoomDetails::where('RoomNumber', $request->room_no)->first();
             if ($update_room) {
                 $newStatus = 'Occupied';

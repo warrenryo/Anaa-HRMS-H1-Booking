@@ -46,7 +46,7 @@
 					<h4>Features</h4>
 					<ul>
 						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Brand Assets</a></li>
+						<li><a href="#">Anaa Hotel</a></li>
 						<li><a href="#">Investor Relations</a></li>
 						<li><a href="#">Terms of Service</a></li>
 					</ul>

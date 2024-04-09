@@ -7,15 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anaa Hotel & Restaurant</title>
 
-    <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
-    <link rel="stylesheet" href="{{ asset('vendors/bootstrap/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendors/fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendors/themify-icons/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendors/linericon/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendors/magnefic-popup/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendors/nice-select/nice-select.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <style>
         input[type="radio"]:checked+label {
             background-color: rgb(89, 89, 254);
@@ -27,105 +19,225 @@
 </head>
 
 <body>
-    <!-- ================ header section start ================= -->
-    <header class="header_area">
-        <div class="header-top">
-            <div class="container">
-                <div class="d-flex align-items-center">
-                    <div id="logo">
-                        <a href="{{ url('home') }}"></a><img src="{{ asset('img/anaa_logs.png') }}" alt="anaa_logo"
-                            title="" /></a>
-                    </div>
-                    <div class="ml-auto d-none d-md-block d-md-flex">
-                        <div class="media header-top-info">
-                            <span class="header-top-info__icon"><i class="fas fa-phone-volume"></i></span>
-                            <div class="media-body">
-                                <p>Have any question?</p>
-                                <p>Free: <a href="tel:+12 365 5233">+12 365 5233</a></p>
-                            </div>
-                        </div>
-                        <div class="media header-top-info">
-                            <span class="header-top-info__icon"><i class="ti-email"></i></span>
-                            <div class="media-body">
-                                <p>Have any question?</p>
-                                <p>Free: <a href="tel:+12 365 5233">+12 365 5233</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="bg-white h-[18vh] flex items-center mx-auto">
+        <div class="mx-2 xl:mx-20 flex items-center justify-between">
+            <a href=""><img src="{{ asset('assets/images/anaa.png') }}" class="w-[24vh]" alt=""></a>
         </div>
+    </div>
+    <!-- Announcement Banner -->
+    <div class="bg-gradient-to-r from-[#9c603b] to-[#de905f]">
+        <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
+            <!-- Grid -->
+            <div class="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2">
+                <div class="text-center md:text-start">
+                    <p class="text-xs text-white/[.8] uppercase tracking-wider">
+                        Preview of Preline
+                    </p>
+                    <p class="mt-1 text-white font-medium">
+                        Sign up to get unlimited updates. No credit card required.
+                    </p>
+                </div>
+                <!-- End Col -->
 
+                <div class="mt-3 text-center md:text-start md:flex md:justify-end md:items-center">
+                    <a class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        href="#">
+                        Sign up free
+                    </a>
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Grid -->
+        </div>
+    </div>
+    <!-- End Announcement Banner -->
 
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+    <!-- ========== HEADER ========== -->
+    <header
+        class="sticky top-0 z-50 w-full bg-[#9c603b] border-b border-[#9c603b] text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
+        <nav class="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+            aria-label="Global">
+            <div class="flex items-center justify-between">
+                <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Anaa Hotel"></a>
+                <div class="sm:hidden">
+                    <button type="button"
+                        class="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-hs-collapse="#navbar-collapse-with-animation"
+                        aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden size-4" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <svg class="hs-collapse-open:block flex-shrink-0 hidden size-4" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
                     </button>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item active"><a class="nav-link" href="{{url('/')}}">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('about')}}">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('properties')}}">Properties</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('gallery')}}">Gallery</a></li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ url('blogs') }}" class="nav-link dropdown-toggle" data-toggle="dropdown"
-                                    role="button" aria-haspopup="true" aria-expanded="false">blogs</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="{{ url('blogs') }}">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ url('blogdetails') }}">Blog
-                                            Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="{{ url('contact') }}">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <ul class="social-icons ml-auto">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#"><i class="fas fa-rss"></i></a></li>
-                </ul>
-        </div>
-        </nav>
-        </div>
-    </header>
-    <!-- ================ header section end ================= -->
-
-    <!-- ================ start banner area ================= -->
-    <section class="contact-banner-area" id="contact">
-        <div class="container h-100">
-            <div class="contact-banner">
-                <div class="text-center">
-                    <h1>Accomodation</h1>
-                    <nav aria-label="breadcrumb" class="banner-breadcrumb">
-                        <ol class="breadcrumb">
-
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">TEST</li>
-                        </ol>
-                    </nav>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- ================ end banner area ================= -->
+            <div id="navbar-collapse-with-animation"
+                class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+                <div
+                    class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+                    <a class="font-medium text-white sm:py-6 " href="{{ url('/') }}" aria-current="page">Home</a>
+                    <a class="font-medium text-white hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                        href="#">Gallery</a>
+                    <a class="font-medium text-white hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                        href="#rooms">Rooms</a>
+                    <a class="font-medium text-white hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                        href="#">About</a>
+
+                    <div
+                        class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4">
+                        <button type="button"
+                            class="flex items-center w-full text-white hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 ">
+                            Dropdown
+                            <svg class="ms-2 size-2.5 text-white" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">
+                                About
+                            </a>
+                            <div
+                                class="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
+                                <button type="button"
+                                    class="w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                    Sub Menu
+                                    <svg class="sm:-rotate-90 ms-2 size-2.5 text-gray-600" width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+
+                                <div
+                                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full before:w-5 top-0 end-full !mx-[10px]">
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                        href="#">
+                                        About
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                        href="#">
+                                        Downloads
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                        href="#">
+                                        Team Account
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">
+                                Downloads
+                            </a>
+                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">
+                                Team Account
+                            </a>
+                        </div>
+                    </div>
 
 
+                    <div
+                        class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4">
+                        @if (Route::has('login'))
+                            @auth
+                                <button type="button"
+                                    class="flex items-center gap-x-2 font-medium text-white hover:text-blue-600 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500">
+                                    <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                    </svg>
+                                    {{ Auth::user()->name }}
+                                    <svg class="ms-2 size-2.5 text-white" width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+
+                                <div
+                                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                        href="{{ url('user-profile') }}">
+                                        Profile
+                                    </a>
+                                    <form method="POST" action="{{ route('logout') }}">
+
+                                        @csrf
+                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                            href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                this.closest('form').submit();"
+                                            @click="toggle">
+                                            <svg class="mr-2 w-4.5 h-4.5 ltr:mr-2 rtl:ml-2 rotate-90" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.5"
+                                                    d="M17 9.00195C19.175 9.01406 20.3529 9.11051 21.1213 9.8789C22 10.7576 22 12.1718 22 15.0002V16.0002C22 18.8286 22 20.2429 21.1213 21.1215C20.2426 22.0002 18.8284 22.0002 16 22.0002H8C5.17157 22.0002 3.75736 22.0002 2.87868 21.1215C2 20.2429 2 18.8286 2 16.0002L2 15.0002C2 12.1718 2 10.7576 2.87868 9.87889C3.64706 9.11051 4.82497 9.01406 7 9.00195"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M12 15L12 2M12 2L15 5.5M12 2L9 5.5" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Sign Out
+                                        </a>
+
+                                    </form>
+
+                                </div>
+                            @else
+                                <button type="button"
+                                    class="flex items-center gap-x-2 font-medium text-white hover:text-blue-600 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500">
+                                    <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                    </svg>
+                                    Login
+                                    <svg class="ms-2 size-2.5 text-white" width="16" height="16"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+
+                                <div
+                                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
+
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                        href="{{ url('login') }}">
+                                        Login
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                        href="{{ url('register') }}">
+                                        Register
+                                    </a>
+                                </div>
+                            @endauth
+                        @endif
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ========== END HEADER ========== -->
     <!-- ================ start banner form ================= -->
-    <div class="" id="1st">
+    <div class="mt-20" id="1st">
         <section class="section-margin">
-            <div class="flex justify-center mx-20">
+            <div class="lg:flex lg:justify-center mx-20">
                 <div class="grid gap-4 px-10 h-[20vh]">
                     <div>
                         <img class="h-auto w-[60vh] rounded-lg" src="{{ asset($rooms->roomImages[0]->images) }}"
@@ -141,15 +253,30 @@
                             </div>
                         @endforeach
 
+
+
                     </div>
+
+
+                    <div>
+                       <span>
+                        Amenities
+                       </span>
+                    </div>
+
+
                 </div>
+
+
+
+
                 <div class="w-[50vh]">
                     <div>
                         <p class="text-4xl">{{ $rooms->RoomType }}</p>
                     </div>
                     <div class="mt-6">
                         <p class="text-3xl text-red-500 font-semibold"><i class="fa-solid fa-peso-sign"></i>
-                            {{ number_format($rooms->roomPrice->three_hours) }} / 3 Hours</p>
+                            {{ number_format($rooms->roomPrice->three_hours) }}</p>
                     </div>
                     <div class="mt-10">
                         <hr>
@@ -157,7 +284,7 @@
                     <div class="mt-10">
                         <p class="text-lg">{{ $rooms->Description }}</p>
                     </div>
-                    <form action="{{ url('http://192.168.101.70:8000/payment-gateway') }}" method="GET">
+                    <form action="{{ url('booking-confirmation/' . $rooms->id) }}" method="GET">
 
                         @csrf
                         <input type="hidden" name="room_type" value="{{ $rooms->RoomType }}" id="">
@@ -205,35 +332,7 @@
                                     <option value="24 hours"> 24 Hours</option>
                                 </select>
                             </div>
-                            <div class="mt-4">
-                                <div>
-                                    <p class="mb-2">Additional Services</p>
-                                    <div class="flex mt-2">
-                                        <input type="checkbox" name="services[]" value="Extra Towels"
-                                            class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                                            id="hs-default-checkbox">
-                                        <p for="towel" class="text-sm text-gray-500 ms-3 dark:text-gray-400">Extra
-                                            Towels
-                                        </p>
-                                    </div>
-                                    <div class="flex mt-2">
-                                        <input type="checkbox" name="services[]" value="Extra Blankets"
-                                            class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                                            id="hs-default-checkbox">
-                                        <p for="hs-default-checkbox"
-                                            class="text-sm text-gray-500 ms-3 dark:text-gray-400">
-                                            Extra Blankets</p>
-                                    </div>
-                                    <div class="flex mt-2">
-                                        <input type="checkbox" name="services[]" value="Extra Pillows"
-                                            class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                                            id="hs-default-checkbox">
-                                        <p for="hs-default-checkbox"
-                                            class="text-sm text-gray-500 ms-3 dark:text-gray-400">
-                                            Extra Pillows</p>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="mt-8">
                             <p class="">Available Rooms</p>
@@ -267,10 +366,14 @@
                                         $hasVacantRoom = true;
                                     @endphp
                                     <button type="button" id="btnBook"
-                                        class="flex items-center justify-center px-4 w-full hover:bg-orange-800 duration-300 rounded-md py-3 text-white bg-[#9c603b]"><span id="spin" class="hidden flex items-center "><div class="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-white rounded-full dark:text-blue-500" role="status" aria-label="loading">
-                                        </div> <span class="ml-2">Book Now</span></span>
-                                       <span id="regular">Book
-                                        Now</span></button>
+                                        class="flex items-center justify-center px-4 w-full hover:bg-orange-800 duration-300 rounded-md py-3 text-white bg-[#9c603b]"><span
+                                            id="spin" class="hidden flex items-center ">
+                                            <div class="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-white rounded-full dark:text-blue-500"
+                                                role="status" aria-label="loading">
+                                            </div> <span class="ml-2">Book Now</span>
+                                        </span>
+                                        <span id="regular">Book
+                                            Now</span></button>
                                 @break
 
                                 {{-- Stop looping after the first vacant room --}}
@@ -294,22 +397,23 @@
                 <!-- Grid -->
                 <div class="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
                     <div>
-                      <div class="mb-4">
-                        <button type="button" id="back" class="px-4 py-2 bg-white shadow-md rounded-md ">Back</button>
-                      </div>
+                        <div class="mb-4">
+                            <button type="button" id="back"
+                                class="px-4 py-2 bg-white shadow-md rounded-md ">Back</button>
+                        </div>
                         <p
                             class="inline-block text-sm font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">
-                            Preline: A vision for 2024
+                            Anaa Hotel & Restaurant
                         </p>
 
                         <!-- Title -->
                         <div class="mt-4 md:mb-12 max-w-2xl">
                             <h1 class="mb-4 font-semibold text-gray-800 text-4xl lg:text-5xl dark:text-gray-200">
-                                Fully customizable rules to match your unique needs
+                                Where Comfort Meets Luxury: Your Ultimate Retreat Awaits!    
                             </h1>
                             <p class="text-gray-600 dark:text-gray-400">
-                                We provide you with a test account that can be set up in seconds. Our main focus is
-                                getting responses to you as soon as we can.
+                                Experience our exclusive hotel promotions today! 
+                                Join us now and start enjoying the benefits of our fast and reliable service!
                             </p>
                         </div>
                         <!-- End Title -->
@@ -326,7 +430,7 @@
 
                             <div class="relative z-10">
                                 <p class="text-xl italic text-gray-800 dark:text-white">
-                                    Amazing people to work with. Very fast and professional partner.
+                                   At our hotel, we prioritize prompt responses to your inquiries.
                                 </p>
                             </div>
 
@@ -334,13 +438,12 @@
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0">
                                         <img class="size-8 rounded-full"
-                                            src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                            alt="Image Description">
+                                            src="{{ asset('assets/images/img.jpg') }}"  alt="Image Description">
                                     </div>
                                     <div class="grow ms-4">
-                                        <div class="font-semibold text-gray-800 dark:text-gray-200">Josh Grazioso
+                                        <div class="font-semibold text-gray-800 dark:text-gray-200">Mari
                                         </div>
-                                        <div class="text-xs text-gray-500">Director Payments & Risk | Airbnb</div>
+                                        <div class="text-xs text-gray-500">Anaa Hotel & Restaurant | CEO</div>
                                     </div>
                                 </div>
                             </footer>
@@ -356,43 +459,18 @@
                                 <!-- Card -->
                                 <div
                                     class="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg dark:bg-slate-900">
+                                    <img src="{{ asset('assets/images/anaa.png') }}" class="mx-auto w-[24vh] mb-2" alt="">
                                     <div class="text-center">
-                                        <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Start
-                                            your
-                                            free trial</h1>
-                                        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                                            Already have an account?
-                                            <a class="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                                href="#">
-                                                Sign in here
-                                            </a>
-                                        </p>
+                                        <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Guest Booking Form</h1>
+                                        
                                     </div>
 
                                     <div class="mt-5">
-                                        <button type="button"
-                                            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                            <svg class="w-4 h-auto" width="46" height="47"
-                                                viewBox="0 0 46 47" fill="none">
-                                                <path
-                                                    d="M46 24.0287C46 22.09 45.8533 20.68 45.5013 19.2112H23.4694V27.9356H36.4069C36.1429 30.1094 34.7347 33.37 31.5957 35.5731L31.5663 35.8669L38.5191 41.2719L38.9885 41.3306C43.4477 37.2181 46 31.1669 46 24.0287Z"
-                                                    fill="#4285F4"></path>
-                                                <path
-                                                    d="M23.4694 47C29.8061 47 35.1161 44.9144 39.0179 41.3012L31.625 35.5437C29.6301 36.9244 26.9898 37.8937 23.4987 37.8937C17.2793 37.8937 12.0281 33.7812 10.1505 28.1412L9.88649 28.1706L2.61097 33.7812L2.52296 34.0456C6.36608 41.7125 14.287 47 23.4694 47Z"
-                                                    fill="#34A853"></path>
-                                                <path
-                                                    d="M10.1212 28.1413C9.62245 26.6725 9.32908 25.1156 9.32908 23.5C9.32908 21.8844 9.62245 20.3275 10.0918 18.8588V18.5356L2.75765 12.8369L2.52296 12.9544C0.909439 16.1269 0 19.7106 0 23.5C0 27.2894 0.909439 30.8731 2.49362 34.0456L10.1212 28.1413Z"
-                                                    fill="#FBBC05"></path>
-                                                <path
-                                                    d="M23.4694 9.07688C27.8699 9.07688 30.8622 10.9863 32.5344 12.5725L39.1645 6.11C35.0867 2.32063 29.8061 0 23.4694 0C14.287 0 6.36607 5.2875 2.49362 12.9544L10.0918 18.8588C11.9987 13.1894 17.25 9.07688 23.4694 9.07688Z"
-                                                    fill="#EB4335"></path>
-                                            </svg>
-                                            Sign up with Google
-                                        </button>
+
 
                                         <div
-                                            class="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t before:border-gray-200 before:me-6 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ms-6 dark:text-gray-500 dark:before:border-gray-700 dark:after:border-gray-700">
-                                            Or</div>
+                                            class="mb-5 py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t before:border-gray-200 before:me-6 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ms-6 dark:text-gray-500 dark:before:border-gray-700 dark:after:border-gray-700">
+                                            Guest Details</div>
 
 
 
@@ -434,6 +512,7 @@
                                                 <!-- Floating Input -->
                                                 <div class="relative">
                                                     <input type="email" required name="email"
+                                                        value="@if (Auth::check()) {{ Auth::user()->email }} @endif"
                                                         id="floating_outlined"
                                                         class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                                         placeholder=" " />
@@ -463,7 +542,7 @@
                                             <!-- Input Group -->
                                             <div>
                                                 <!-- Floating Input -->
-                                                
+
                                                 <!-- End Floating Input -->
                                             </div>
                                             <div>
@@ -483,20 +562,55 @@
                                         <div class="mt-5 flex items-center">
                                             <div class="flex">
                                                 <input id="remember-me" name="remember-me" type="checkbox"
-                                                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                                                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
                                             </div>
+                                            
                                             <div class="ms-3">
-                                                <label for="remember-me" class="text-sm dark:text-white">I
-                                                    accept the
-                                                    <a class="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                                        href="#">Terms and Conditions</a></label>
+                                                <label for="remember-me" class="text-sm dark:text-white">
+                                                    I accept the
+                                                    <a id="terms-link" href="#" class="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Terms and Conditions</a>
+                                                </label>
                                             </div>
+                                          
+                                            <div id="modal" class="fixed inset-0 flex items-center justify-center hidden bg-black bg-opacity-50">
+                                                <div class="bg-gray-200 bg-opacity-90 p-6 rounded-lg shadow-black-dark-light  w-96 h-80 overflow">
+                                                    <h2 class="text-lg font-semibold mb-4">Anaa: Hotel & Restaurant <br>Terms & Conditions</h2>
+                                                    <ul class=" text-sm text-gray-800 dark:text-white">
+                                                        <li>
+                                                            <b>Reservation Policy</b>
+                                                            <ol>
+                                                                <li class="ml-2"><ol>- All reservations are subject to availability and confirmation by the hotel.</li>
+                                                                <li>- Reservations can be made online through our website, by phone, or through third-party booking platforms.</li>
+                                                                <li>- Guests must present a valid government-issued ID and credit card upon check-in.</li>
+                                                                <li>- Late check-out requests beyond 11:00 AM may be subject to additional charges.</li>
+                                                            </ol>
+                                                        </li>
+
+
+                                                        <li>
+                                                            <b>Check-in and Check-out Policy</b>
+                                                            <ol>
+                                                                <li class="ml-2"><ol>- Check-in time is at 3:00 PM, and check-out time is at 11:00 AM.</li>
+                                                                <li>- Early check-in and late check-out requests are subject to availability and may incur additional charges.</li>
+                                                                <li>- A valid credit card and contact information are required to secure a reservation.</li>
+                                                                <li>- Advance deposit or prepayment may be required for certain rates or during peak seasons.</li>
+                                                            </ol>
+                                                        </li>
+
+                                                    </ul>
+                                                    <button id="close-modal" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg">Close</button>
+                                                </div>
+                                            </div>
+                                            
+
+
+                                            
                                         </div>
                                         <!-- End Checkbox -->
 
                                         <div class="mt-5">
                                             <button type="submit"
-                                                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Book
+                                                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#9c603b] text-white hover:bg-orange-500  disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Book
                                                 Now</button>
                                         </div>
                                     </div>
@@ -514,97 +628,24 @@
                 <div
                     class="mt-6 md:mt-12 py-3 flex items-center text-sm text-gray-800 gap-x-1.5 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:after:border-gray-700">
                     <span
-                        class="font-semibold bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">50,000</span>
-                    individuals and companies trust Preline
+                        class="font-semibold bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400"></span>
+              
                 </div>
 
                 <!-- Clients -->
                 <div class="flex flex-wrap gap-x-6 sm:gap-x-12 lg:gap-x-24">
+ <!--
+                    
                     <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-gray-500"
                         enable-background="new 0 0 2499 614" viewBox="0 0 2499 614"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m431.7 0h-235.5v317.8h317.8v-235.5c0-45.6-36.7-82.3-82.3-82.3zm-308.9 0h-40.5c-45.6 0-82.3 36.7-82.3 82.3v40.5h122.8zm-122.8 196.2h122.8v122.8h-122.8zm392.5 317.8h40.5c45.6 0 82.3-36.7 82.3-82.3v-39.2h-122.8zm-196.3-121.5h122.8v122.8h-122.8zm-196.2 0v40.5c0 45.6 36.7 82.3 82.3 82.3h40.5v-122.8zm828-359.6h-48.1v449.4h254.5v-43h-206.4zm360.8 119c-93.7 0-159.5 69.6-159.5 169.6v11.5c1.3 43 20.3 83.6 51.9 113.9 30.4 27.9 69.6 44.3 111.4 44.3h6.3c44.3 0 86.1-16.5 119-44.3l1.3-1.3-21.5-35.4-2.5 1.3c-26.6 24.1-59.5 38-94.9 38-58.2 0-117.7-38-121.5-122.8h243.1v-2.5s1.3-15.2 1.3-22.8c-.3-91.2-53.4-149.5-134.4-149.5zm-108.9 134.2c10.1-57 51.9-93.7 106.3-93.7 40.5 0 84.8 24.1 88.6 93.7zm521.6-96.2v16.5c-20.3-34.2-58.2-55.7-97.5-55.7h-3.8c-86.1 0-145.6 68.4-145.6 168.4 0 101.3 57 169.6 141.8 169.6 67.1 0 97.5-40.5 107.6-58.2v49.4h45.6v-447h-46.8v157zm-98.8 257c-59.5 0-98.7-50.6-98.7-126.6 0-73.4 41.8-125.3 100-125.3 49.4 0 98.7 39.2 98.7 125.3 0 93.7-51.9 126.6-100 126.6zm424.1-250.7v2.5c-8.9-15.2-36.7-48.1-103.8-48.1-84.8 0-140.5 64.6-140.5 163.3s58.2 165.8 144.3 165.8c46.8 0 78.5-16.5 100-50.6v44.3c0 62-39.2 97.5-108.9 97.5-29.1 0-59.5-7.6-86.1-21.5l-2.5-1.3-17.7 39.2 2.5 1.3c32.9 16.5 69.6 25.3 105.1 25.3 74.7 0 154.4-38 154.4-143.1v-311.3h-46.8zm-93.7 241.8c-62 0-102.5-48.1-102.5-122.8 0-76 35.4-119 96.2-119 67.1 0 98.7 39.2 98.7 119 1.3 78.5-31.6 122.8-92.4 122.8zm331.7-286.1c-93.7 0-158.2 69.6-158.2 168.4v11.4c1.3 43 20.3 83.6 51.9 113.9 30.4 27.9 69.6 44.3 111.4 44.3h6.3c44.3 0 86.1-16.5 119-44.3l1.3-1.3-22.8-35.4-2.5 1.3c-26.6 24.1-59.5 38-94.9 38-58.2 0-117.7-38-121.5-122.8h244.2v-2.5s1.3-15.2 1.3-22.8c0-89.9-53.2-148.2-135.5-148.2zm-107.6 134.2c10.1-57 51.9-93.7 106.3-93.7 40.5 0 84.8 24.1 88.6 93.7zm440.6-127.9c-6.3-1.3-11.4-1.3-17.7-2.5-44.3 0-81 27.9-100 74.7v-72.2h-46.8l1.3 320.3v2.5h48.1v-135.4c0-20.3 2.5-41.8 8.9-60.8 15.2-49.4 49.4-81 89.9-81 5.1 0 10.1 0 15.2 1.3h2.5v-46.8z"
                             fill="currentColor" />
-                    </svg>
+                    </svg>-->
 
-                    <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-gray-500"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-4.126838974812941 0.900767442746961 939.436838974813 230.18142889845947"
-                        width="2500" height="607">
-                        <path
-                            d="M667.21 90.58c-13.76 0-23.58 4.7-28.4 13.6l-2.59 4.82V92.9h-22.39v97.86h23.55v-58.22c0-13.91 7.56-21.89 20.73-21.89 12.56 0 19.76 7.77 19.76 21.31v58.8h23.56v-63c0-23.3-12.79-37.18-34.22-37.18zm-114.21 0c-27.79 0-45 17.34-45 45.25v13.74c0 26.84 17.41 43.51 45.44 43.51 18.75 0 31.89-6.87 40.16-21l-14.6-8.4c-6.11 8.15-15.87 13.2-25.55 13.2-14.19 0-22.66-8.76-22.66-23.44v-3.89h65.73v-16.23c0-26-17.07-42.74-43.5-42.74zm22.09 43.15h-44.38v-2.35c0-16.11 7.91-25 22.27-25 13.83 0 22.09 8.76 22.09 23.44zm360.22-56.94V58.07h-81.46v18.72h28.56V172h-28.56v18.72h81.46V172h-28.57V76.79zM317.65 55.37c-36.38 0-59 22.67-59 59.18v19.74c0 36.5 22.61 59.18 59 59.18s59-22.68 59-59.18v-19.74c-.01-36.55-22.65-59.18-59-59.18zm34.66 80.27c0 24.24-12.63 38.14-34.66 38.14S283 159.88 283 135.64v-22.45c0-24.24 12.64-38.14 34.66-38.14s34.66 13.9 34.66 38.14zm98.31-45.06c-12.36 0-23.06 5.12-28.64 13.69l-2.53 3.9V92.9h-22.4v131.53h23.56v-47.64l2.52 3.74c5.3 7.86 15.65 12.55 27.69 12.55 20.31 0 40.8-13.27 40.8-42.93v-16.64c0-21.37-12.63-42.93-41-42.93zM468.06 149c0 15.77-9.2 25.57-24 25.57-13.8 0-23.43-10.36-23.43-25.18v-14.72c0-15 9.71-25.56 23.63-25.56 14.69 0 23.82 9.79 23.82 25.56zm298.47-90.92L719 190.76h23.93l9.1-28.44h54.64l.09.28 9 28.16h23.92L792.07 58.07zm-8.66 85.53l21.44-67.08 21.22 67.08zM212.59 95.12a57.27 57.27 0 0 0-4.92-47.05 58 58 0 0 0-62.4-27.79A57.29 57.29 0 0 0 102.06 1a57.94 57.94 0 0 0-55.27 40.14A57.31 57.31 0 0 0 8.5 68.93a58 58 0 0 0 7.13 67.94 57.31 57.31 0 0 0 4.92 47A58 58 0 0 0 83 211.72 57.31 57.31 0 0 0 126.16 231a57.94 57.94 0 0 0 55.27-40.14 57.3 57.3 0 0 0 38.28-27.79 57.92 57.92 0 0 0-7.12-67.95zM126.16 216a42.93 42.93 0 0 1-27.58-10c.34-.19 1-.52 1.38-.77l45.8-26.44a7.43 7.43 0 0 0 3.76-6.51V107.7l19.35 11.17a.67.67 0 0 1 .38.54v53.45A43.14 43.14 0 0 1 126.16 216zm-92.59-39.54a43 43 0 0 1-5.15-28.88c.34.21.94.57 1.36.81l45.81 26.45a7.44 7.44 0 0 0 7.52 0L139 142.52v22.34a.67.67 0 0 1-.27.6l-46.3 26.72a43.14 43.14 0 0 1-58.86-15.77zm-12-100A42.92 42.92 0 0 1 44 57.56V112a7.45 7.45 0 0 0 3.76 6.51l55.9 32.28L84.24 162a.68.68 0 0 1-.65.06L37.3 135.33a43.13 43.13 0 0 1-15.77-58.87zm159 37l-55.9-32.28L144 70a.69.69 0 0 1 .65-.06l46.29 26.73a43.1 43.1 0 0 1-6.66 77.76V120a7.44 7.44 0 0 0-3.74-6.54zm19.27-29c-.34-.21-.94-.57-1.36-.81L152.67 57.2a7.44 7.44 0 0 0-7.52 0l-55.9 32.27V67.14a.73.73 0 0 1 .28-.6l46.29-26.72a43.1 43.1 0 0 1 64 44.65zM78.7 124.3l-19.36-11.17a.73.73 0 0 1-.37-.54V59.14A43.09 43.09 0 0 1 129.64 26c-.34.19-.95.52-1.38.77l-45.8 26.44a7.45 7.45 0 0 0-3.76 6.51zm10.51-22.67l24.9-14.38L139 101.63v28.74l-24.9 14.38-24.9-14.38z"
-                            fill="currentColor" />
-                    </svg>
-
-                    <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-gray-500"
-                        xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 88 22" xml:space="preserve"
-                        enable-background="new 0 0 88 22">
-                        <path
-                            d="M36.3 14.6a7.3 7.3 0 0 1-5.6 2.8c-3.8 0-6.8-2.7-6.8-6.2a6 6 0 0 1 2-4.5A6 6 0 0 1 30.5 5c2.2 0 4.3 1 5.6 2.8l-2.5 1.8a3.7 3.7 0 0 0-3.1-1.8 3.5 3.5 0 0 0-3.5 3.5c.1 2 1.7 3.5 3.6 3.5 1.3 0 2.5-.6 3.2-1.7l2.5 1.5z"
-                            fill="currentColor" />
-                        <path d="M37.7 0H40.8V17.1H37.7z" fill="currentColor" />
-                        <path
-                            d="M49.1 14.7c2 0 3.7-1.6 3.8-3.6-.1-2-1.8-3.6-3.8-3.6s-3.7 1.6-3.8 3.6c.1 2 1.7 3.6 3.8 3.6m0-9.8c1.7-.1 3.4.5 4.7 1.7 1.3 1.2 2 2.8 2.1 4.5a6.4 6.4 0 0 1-2.1 4.5 6.4 6.4 0 0 1-4.7 1.7c-3.8 0-6.8-2.7-6.8-6.2s3-6.2 6.8-6.2"
-                            fill="currentColor" />
-                        <path d="M55.3 5.1 59 5.1 62 11.5 65.2 5.1 68.6 5.1 62 17.8z" fill="currentColor" />
-                        <path
-                            d="M77.5 9.4a3 3 0 0 0-2.9-1.9c-1.3 0-2.5.7-3.1 1.9h6zm2 6.3a7 7 0 0 1-4.6 1.6c-3.8 0-6.8-2.7-6.8-6.2 0-1.7.7-3.3 1.9-4.5a6 6 0 0 1 4.6-1.7c1.7-.1 3.3.6 4.5 1.8s1.8 2.8 1.7 4.5v.8h-9.6a3.9 3.9 0 0 0 6.5 1.5l1.8 2.2zm2.8-5.3c0-2.9 2.2-5.2 5.7-5.2V8c-.7 0-1.5.3-2 .8s-.7 1.3-.6 2v6.3h-3.1v-6.7z"
-                            fill="currentColor" />
-                        <path
-                            d="M9.7 5.6a5 5 0 0 0-8.3-3.5C0 3.5-.4 5.6.3 7.4s2.5 3 4.5 3h4.9V5.6zm1.4 0a5 5 0 0 1 8.3-3.5c1.4 1.4 1.8 3.5 1.1 5.3s-2.5 3-4.5 3h-4.9V5.6zm0 11a5 5 0 0 0 8.3 3.5c1.4-1.4 1.8-3.5 1.1-5.3s-2.5-3-4.5-3h-4.9v4.8zm-6.3 3.5c1.9 0 3.5-1.5 3.5-3.5v-3.5H4.8c-1.9 0-3.5 1.5-3.5 3.5s1.6 3.5 3.5 3.5zm4.9-3.5a5 5 0 0 1-8.3 3.5C0 18.7-.4 16.6.3 14.8s2.5-3 4.5-3h4.9v4.8z"
-                            fill="currentColor" />
-                    </svg>
-
-                    <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-gray-500"
-                        viewBox="0 -8.881784197001252e-16 267.51517722360785 65.24679557585003"
-                        xmlns="http://www.w3.org/2000/svg" width="2500" height="610">
-                        <path
-                            d="M263.043 56.411a4.418 4.418 0 1 0 .085 0zm0 8.33a3.874 3.874 0 1 1 3.809-3.938v.065a3.791 3.791 0 0 1-3.708 3.871h-.1m-16.96-9.535h-9.6V40.17c0-3.585-.064-8.2-4.993-8.2-5 0-5.765 3.906-5.765 7.939v15.294h-9.6V24.287h9.216v4.225h.129a10.1 10.1 0 0 1 9.093-4.994c9.73 0 11.524 6.4 11.524 14.726zm-40.79-35.143a5.571 5.571 0 1 1 5.57-5.572 5.571 5.571 0 0 1-5.57 5.572m4.8 35.143h-9.61V24.287h9.61zM250.87.004h-55.21a4.728 4.728 0 0 0-4.781 4.67v55.439a4.731 4.731 0 0 0 4.781 4.675h55.21a4.741 4.741 0 0 0 4.8-4.675V4.67a4.738 4.738 0 0 0-4.8-4.67m-86.12 31.749c-4.8 0-7.68 3.205-7.68 7.875s2.879 7.878 7.68 7.878 7.687-3.2 7.687-7.878-2.881-7.875-7.687-7.875m16.525 23.437h-8.838v-4.1h-.131a12.071 12.071 0 0 1-9.544 4.868c-9.224 0-15.3-6.657-15.3-16.071 0-8.646 5.377-16.585 14.216-16.585 3.973 0 7.684 1.087 9.861 4.1h.126V9.577h9.609zm-46.139-19.048a5.756 5.756 0 0 0-5.894-5.89 6.406 6.406 0 0 0-6.784 5.89zm8.132 13.7a16.909 16.909 0 0 1-13.128 6.151c-9.6 0-17.286-6.408-17.286-16.331s7.685-16.328 17.286-16.328c8.973 0 14.6 6.4 14.6 16.328v3.01h-22.282a7.171 7.171 0 0 0 7.235 6.019 8.193 8.193 0 0 0 6.851-3.778zM47.834 24.279h9.219v4.225h.131a10.085 10.085 0 0 1 9.09-4.994c9.735 0 11.527 6.405 11.527 14.726V55.19h-9.6V40.159c0-3.588-.066-8.2-5-8.2-4.99 0-5.76 3.907-5.76 7.939v15.288h-9.6zM82.669 9.58h9.6v27.265l10.88-12.583h11.77l-12.6 14.313 12.335 16.63h-12.066L92.397 39.923h-.126v15.28h-9.6zM32.911 24.276h9.6v30.916h-9.6zm4.8-15.37a5.569 5.569 0 1 1-5.57 5.569 5.569 5.569 0 0 1 5.57-5.569M0 9.587h9.993v36.4h18.5v9.222H0zm263.744 51.522a1.2 1.2 0 0 0 1.21-1.269c0-.9-.543-1.33-1.657-1.33h-1.8v4.712h.677v-2.054h.832l.019.025 1.291 2.029h.724l-1.389-2.1zm-.783-.472h-.785v-1.593h.995c.514 0 1.1.084 1.1.757 0 .774-.593.836-1.314.836"
-                            fill="currentColor" />
-                    </svg>
-
-                    <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-gray-500" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 33">
-                        <path d="M9.3 16.5C9.3 9 14.3 2.7 21.2.7a16.5 16.5 0 1 0 0 31.6c-6.9-2-11.9-8.3-11.9-15.8Z"
-                            fill="currentColor" />
-                        <path d="M21.7 10c4 0 7.4 2.8 8.5 6.4a8.9 8.9 0 1 0-17 0c1-3.6 4.4-6.3 8.5-6.3Z"
-                            fill="currentColor" />
-                        <path d="M24.8 19.4c0 3-2 5.5-4.8 6.3A6.6 6.6 0 1 0 20 13c2.8.8 4.8 3.4 4.8 6.4Z"
-                            fill="currentColor" />
-                        <path
-                            d="M39.6 13.5A4.4 4.4 0 0 1 44 9.1h1.3v2.7l-1 .2-1 .6-.2.4-.1.5h2.3v3H43v9.2h-3.4v-9.3h-1.3v-2.9h1.3ZM55.7 13.5h3.4v6.1a6.9 6.9 0 0 1-1.7 4.6 6 6 0 0 1-4.5 1.8c-1 0-1.8-.1-2.5-.5a6 6 0 0 1-3.2-3.4c-.3-.8-.4-1.6-.4-2.5v-6H50v6c0 .5 0 1 .2 1.3l.5 1c.2.4.5.6.9.8.3.2.8.3 1.2.3a2.6 2.6 0 0 0 2.1-1c.3-.3.4-.7.5-1l.2-1.4v-6ZM61.2 25.7V9.5h3.4v16.2h-3.4ZM66.9 25.7V9.5h3.3v16.2H67ZM78.5 21.2l3.3-7.7h3.7l-5.7 12.2h-2.7l-5.6-12.2H75l3.4 7.7ZM87 13.5h3.3v12.2H87V13.5Zm1.6-5 .8.1.6.4.4.7.2.7a1.9 1.9 0 0 1-.6 1.4l-.6.4a2 2 0 0 1-.8.1c-.5 0-1-.2-1.3-.5a2 2 0 0 1-.4-2.1c0-.3.2-.5.4-.7l.6-.4.7-.1ZM98.8 13.2a6.7 6.7 0 0 1 4.8 1.9 6.3 6.3 0 0 1 1.9 5.7h-9.8a3.3 3.3 0 0 0 3.2 2.2c.5 0 1-.1 1.4-.4.5-.2.9-.5 1.2-1h3.7c-.2.7-.5 1.3-1 1.8a6.1 6.1 0 0 1-3.3 2.3 7 7 0 0 1-6.9-1.6 6.1 6.1 0 0 1-2-4.5 6.1 6.1 0 0 1 2-4.5c.7-.6 1.4-1 2.2-1.4.8-.3 1.7-.5 2.6-.5Zm3.2 5.2c-.3-.6-.7-1.1-1.2-1.5-.6-.4-1.3-.7-2-.7s-1.4.3-2 .7c-.5.4-.9.9-1.1 1.5h6.3ZM123 13.5h3.6l-5 12.2H119l-2.5-6.5-2.5 6.5h-2.7l-5-12.2h3.6l2.7 7 2.8-7h2.2l2.8 7 2.7-7Z"
-                            fill="currentColor" />
-                    </svg>
-
-                    <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-gray-500" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32">
-                        <g clip-path="url(#a)">
-                            <path
-                                d="M46.6 11c.5-.7 1-1.3 1.9-1.7.7-.5 1.6-.7 2.6-.7v3.9h-1c-1.1 0-2 .2-2.6.8-.6.5-1 1.5-1 2.8v7.3H43V8.8h3.7v2.3ZM53 16c0-1.4.2-2.7.8-3.9a6.6 6.6 0 0 1 5.9-3.6 6 6 0 0 1 4.9 2.4v-2h3.7v14.5h-3.7v-2.1c-.5.6-1.2 1.2-2 1.7-.9.4-1.8.6-3 .6a6.4 6.4 0 0 1-5.8-3.6 8.7 8.7 0 0 1-.9-4Zm11.6.1c0-.9-.2-1.7-.6-2.3-.3-.6-.8-1.1-1.4-1.5-.6-.3-1.3-.5-2-.5a3.8 3.8 0 0 0-3.3 2c-.4.6-.5 1.4-.5 2.2 0 1 .1 1.7.5 2.4a3.8 3.8 0 0 0 3.4 2 4 4 0 0 0 1.9-.5c.6-.4 1-.9 1.4-1.5.4-.6.6-1.4.6-2.3ZM86.4 8.8l-9.2 21.5h-4l3.3-7.3-6-14.2h4.2L78.5 19l3.9-10.2h4ZM95.2 23.6a8 8 0 0 1-3.8-.9 7 7 0 0 1-2.7-2.7 8 8 0 0 1-1-3.9c0-1.5.3-2.8 1-4a7 7 0 0 1 2.8-2.6 8 8 0 0 1 3.8-1 8 8 0 0 1 3.9 1 7.6 7.6 0 0 1 3.7 6.6c0 1.5-.3 2.8-1 4a7 7 0 0 1-2.8 2.6c-1.2.6-2.4 1-3.9 1Zm0-3.2a3.6 3.6 0 0 0 3.3-2c.4-.6.6-1.4.6-2.3 0-1.4-.4-2.4-1.1-3.2a3.6 3.6 0 0 0-2.7-1.1c-1.1 0-2 .4-2.7 1.1-.7.8-1.1 1.8-1.1 3.2 0 1.4.4 2.5 1 3.2.8.7 1.6 1.1 2.7 1.1ZM114.1 8.6c1.8 0 3.2.6 4.3 1.7 1 1 1.6 2.6 1.6 4.5v8.6h-3.7v-8c0-1.2-.3-2.1-1-2.7-.5-.7-1.3-1-2.3-1-1 0-1.9.3-2.5 1-.6.6-.8 1.5-.8 2.6v8h-3.8V8.9h3.8v1.8a5 5 0 0 1 1.8-1.4 6 6 0 0 1 2.6-.6ZM25.1 0H7C3 0 0 3 0 6.9V25C0 29 3 32 6.9 32H25c3.8 0 6.9-3 6.9-6.9V7C32 3 29 0 25.1 0Z"
-                                fill="currentColor" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12.7 12a2.5 2.5 0 1 0 0-5.1 2.5 2.5 0 0 0 0 5Zm4-5.1a6.1 6.1 0 1 1 0 12.1V7Zm0 12.1 6.2 6.1H9V11.4l7.7 7.6Z"
-                                fill="currentColor" class="fill-white dark:fill-slate-900" />
-                        </g>
-                    </svg>
-
-                    <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-gray-500"
-                        xmlns="http://www.w3.org/2000/svg" width="2500" height="1036"
-                        viewBox="0 -6.166 294.398 121.975">
-                        <path
-                            d="M12.139 90.511c-3.939 0-7.799-.479-10.938-1.292l.487-8.277c3.053 1.123 7.313 2.012 11.254 2.012 5.952 0 10.775-2.492 10.775-8.359C23.718 63.172 0 68.002 0 50.466c0-9.325 7.315-15.834 19.941-15.834 3.214 0 6.51.397 9.809.959l-.485 7.802c-3.132-.963-6.591-1.527-9.806-1.527-6.754 0-10.211 3.134-10.211 7.638 0 10.855 23.72 6.839 23.72 23.798-.005 9.973-7.882 17.209-20.829 17.209M54.106 90.264c-2.249 0-3.938-.076-6.03-.479v17.397h-8.601V49.746h8.12c0 2.094-.082 5.309-.484 7.476h.162c2.25-5.068 6.833-8.283 12.944-8.283 9.487 0 14.712 6.75 14.712 18.814.001 14.076-7.473 22.511-20.823 22.511m3.861-34.246c-6.434 0-9.892 7.558-9.892 14.384v12.312c1.852.562 3.86.804 6.272.804 6.833 0 11.497-4.182 11.497-14.958.001-8.039-2.49-12.542-7.877-12.542zM102.519 57.381C94.561 55.936 90.7 61.485 90.7 73.466v16.238h-8.606V49.746H90.3c0 2.246-.246 5.791-.809 8.844h.162c1.771-5.388 5.79-10.377 13.271-9.651l-.405 8.442M114.803 43.797c-3.056 0-5.55-2.414-5.55-5.393 0-2.971 2.494-5.385 5.55-5.385 2.974 0 5.467 2.333 5.467 5.385 0 2.979-2.493 5.393-5.467 5.393m4.26 45.907h-8.6V49.746h8.6v39.958zM154.449 89.704V63.975c0-4.982-1.374-7.875-5.951-7.875-6.03 0-10.457 6.345-10.457 14.302v19.303h-8.603V49.746h8.203c0 2.094-.162 5.546-.563 7.796l.082.075c2.33-5.141 7.157-8.68 13.91-8.68 9.084 0 11.9 5.711 11.9 12.787v27.979h-8.521M186.675 90.425c-8.524 0-11.1-3.294-11.1-12.214V56.417h-7.634v-6.671h7.634V37.04l8.523-2.333v15.039h10.532v6.671h-10.448v19.137c0 5.954 1.205 7.558 5.224 7.558 1.769 0 3.699-.24 5.226-.643v7.076c-2.331.486-5.307.88-7.957.88"
-                            fill="currentColor" />
-                        <path
-                            d="M233.712 78.636c11.72-15.086 20.938-32.809 20.938-45.537 0-6.652-4.765-11.295-10.978-14.823.123 13.831-4.668 46.263-9.96 60.36M195.279 115.809c27.47-9.188 67.29-30.598 94.985-49.725 2.324-1.6 4.135-3.085 4.135-5.685 0-4.519-8.275-10.576-12.292-12.987-21.792 22.653-65.163 56.596-86.828 68.397"
-                            fill="currentColor" />
-                        <path
-                            d="M220.76 96.567c16.938-11.709 41.545-33.739 49.873-45.727 1.963-2.82 3.416-4.454 3.416-7.405 0-4.839-5.644-8.382-9.703-10.849-9.727 22.924-31.579 51.469-43.586 63.981M236.192 64.087c2.191-14.477.903-31.952-1.894-42.913-1.521-5.969-6.901-12.706-11.88-14.812 6.526 18.522 12.128 44.898 13.774 57.725"
-                            fill="currentColor" />
-                        <path
-                            d="M231.367 43.779C226.235 29.91 213.446.998 194.633-6.165c12.247 13.516 30.417 40.337 36.734 49.944"
-                            fill="currentColor" />
-                    </svg>
+           
+                    
                 </div>
                 <!-- End Clients -->
             </div>
@@ -615,30 +656,357 @@
 </div>
 <!-- ================ Explore section end ================= -->
 
-<div class="mt-20 ">
+<div class="mt-20 mx-20">
     <div class="border-b border-gray-200 dark:border-gray-700 mx-[50vh]">
         <nav class="-mb-0.5 flex justify-center space-x-[15vh]" aria-label="Tabs" role="tablist">
             <button type="button"
                 class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-blue-500 active"
                 id="horizontal-alignment-item-1" data-hs-tab="#horizontal-alignment-1"
                 aria-controls="horizontal-alignment-1" role="tab">
-                DESCRIPTION
+                REVIEWS
             </button>
             <button type="button"
                 class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-blue-500"
                 id="horizontal-alignment-item-2" data-hs-tab="#horizontal-alignment-2"
                 aria-controls="horizontal-alignment-2" role="tab">
-                REVIEWS
+                SEND A REVIEW
             </button>
 
         </nav>
     </div>
 
-    <div class="mt-3 mx-20 py-[10vh]">
+    <div class="">
         <div id="horizontal-alignment-1" role="tabpanel" aria-labelledby="horizontal-alignment-item-1">
-            <p class="text-gray-500 text-center dark:text-gray-400">
-                {{ $rooms->Description }}
-            </p>
+
+            @forelse($reviews as $review)
+                '
+                <article class="mx-[50vh]">
+                    <div class="panel">
+                        <div class="flex items-center">
+
+                            <div class="font-medium dark:text-white">
+                                <p>
+                                    @if ($review->name == null)
+                                        No Name
+                                    @else
+                                        <span class="text-lg">{{ $review->name }}</span>
+                                    @endif
+                                    <time datetime="2014-08-16 19:00"
+                                        class="block text-sm text-gray-500 dark:text-gray-400">{{ $review->created_at }}</time>
+                                </p>
+                            </div>
+                        </div>
+                        <p>Room Ratings</p>
+                        <div class="flex items-center mb-1 space-x-1 rtl:space-x-reverse">
+                            @if ($review->how_room == 'Excellent')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Excellent</h3>
+                            @endif
+                            @if ($review->how_room == 'Good')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Good</h3>
+                            @endif
+                            @if ($review->how_room == 'Fair')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Fair</h3>
+                            @endif
+                            @if ($review->how_room == 'Poor')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Poor</h3>
+                            @endif
+                            @if ($review->how_room == 'Bad')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Bad</h3>
+                            @endif
+                        </div>
+                        <p class="mt-4">Service Ratings</p>
+                        <div class="flex items-center mb-1 space-x-1 rtl:space-x-reverse">
+                            @if ($review->how_service == 'Excellent')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Excellent</h3>
+                            @endif
+                            @if ($review->how_service == 'Good')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Good</h3>
+                            @endif
+                            @if ($review->how_service == 'Fair')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Fair</h3>
+                            @endif
+                            @if ($review->how_service == 'Poor')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Poor</h3>
+                            @endif
+                            @if ($review->how_service == 'Bad')
+                                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="#fcd303" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <h3 class="ms-2 text-sm font-semibold text-gray-900 dark:text-white">Bad</h3>
+                            @endif
+                        </div>
+
+                        <p class="mb-2 text-gray-500 dark:text-gray-400 mt-4 pb-4">{{ $review->reviews }}</p>
+
+
+                        <aside>
+                            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful
+                            </p>
+                            <div class="flex items-center mt-3">
+                                <a href="#"
+                                    class="px-2 py-1.5 text-xs font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Helpful</a>
+                                <a href="#"
+                                    class="ps-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500 border-gray-200 ms-4 border-s md:mb-0 dark:border-gray-600">Report
+                                    abuse</a>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="mt-4">
+                        {{ $reviews->links() }}
+                    </div>
+                </article>
+            @empty
+                <p class="text-center p-20 ">No reviews found.</p>
+            @endforelse
+
         </div>
         <div id="horizontal-alignment-2" class="hidden duration-300" role="tabpanel"
             aria-labelledby="horizontal-alignment-item-2">
@@ -649,11 +1017,13 @@
                     <div>
                         <h1
                             class="text-3xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
-                            Hire us
+                            About Us
                         </h1>
                         <p class="mt-1 md:text-lg text-gray-800 dark:text-gray-200">
-                            We help brands and platforms turn big ideas into beautiful digital products and
-                            experiences.
+
+                            Whether you're planning a romantic getaway, a family vacation, or a business trip ,ours is the perfect choice for your next adventure. 
+                            Book your stay with us today and discover the true meaning of hospitality.
+
                         </p>
 
                         <div class="mt-8">
@@ -670,7 +1040,7 @@
                                         <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                     <span class="text-gray-600 dark:text-gray-400">
-                                        Industry-leading design
+                                        Top-tier in Hospitality Service!
                                     </span>
                                 </li>
 
@@ -682,7 +1052,7 @@
                                         <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                     <span class="text-gray-600 dark:text-gray-400">
-                                        Developer community support
+                                        Affordable prize!
                                     </span>
                                 </li>
 
@@ -694,7 +1064,7 @@
                                         <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                     <span class="text-gray-600 dark:text-gray-400">
-                                        Simple and affordable
+                                        Stay tune for special deals!
                                     </span>
                                 </li>
                             </ul>
@@ -788,132 +1158,79 @@
                         <!-- End Brands -->
 
                         <div class="mt-10 flex items-center gap-x-5">
-                            <!-- Avatar Group -->
-                            <div class="flex -space-x-2">
-                                <img class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-gray-800"
-                                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                    alt="Image Description">
-                                <img class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-gray-800"
-                                    src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80"
-                                    alt="Image Description">
-                                <img class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-gray-800"
-                                    src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
-                                    alt="Image Description">
-                                <span
-                                    class="inline-flex justify-center items-center size-8 rounded-full bg-blue-600 text-white ring-2 ring-white">
-                                    <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <!-- End Avatar Group -->
-                            <span class="text-sm text-gray-500">
-                                Trusted by over 37k customer
-                            </span>
+
+
+                            
                         </div>
                     </div>
                     <!-- End Col -->
-
+                    @include('sweetalert::alert')
                     <div class="relative">
                         <!-- Card -->
                         <div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-10 dark:border-gray-700">
                             <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                                Fill in the form
+                                Tell us your Thoughts!
                             </h2>
 
-                            <form>
+                            <form method="POST" action="{{ url('submit-reviews/' . $rooms->id) }}">
+                                @csrf
                                 <div class="mt-6 grid gap-4 lg:gap-6">
                                     <!-- Grid -->
+
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                                         <div>
                                             <label for="hs-firstname-hire-us-1"
-                                                class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">First
+                                                class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">
                                                 Name</label>
-                                            <input type="text" name="hs-firstname-hire-us-1"
+                                            <input type="text" name="name" placeholder="Optional"
                                                 id="hs-firstname-hire-us-1"
                                                 class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
                                         </div>
-
-                                        <div>
-                                            <label for="hs-lastname-hire-us-1"
-                                                class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Last
-                                                Name</label>
-                                            <input type="text" name="hs-lastname-hire-us-1"
-                                                id="hs-lastname-hire-us-1"
-                                                class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
-                                        </div>
                                     </div>
-                                    <!-- End Grid -->
-
                                     <div>
-                                        <label for="hs-work-email-hire-us-1"
-                                            class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Work
-                                            Email</label>
-                                        <input type="email" name="hs-work-email-hire-us-1"
-                                            id="hs-work-email-hire-us-1" autocomplete="email"
-                                            class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                                        <label for="ctnSelect1"
+                                            class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">How's
+                                            the room?</label>
+                                        <select name="room" id="ctnSelect1"
+                                            class="form-select text-white-dark" required>
+                                            <option disabled selected>Select your ratings</option>
+                                            <option value="Excellent">Excellent</option>
+                                            <option value="Good">Good</option>
+                                            <option value="Fair">Fair</option>
+                                            <option value="Poor">Poor</option>
+                                            <option value="Bad">Bad</option>
+                                        </select>
                                     </div>
-
-                                    <!-- Grid -->
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                                        <div>
-                                            <label for="hs-company-hire-us-1"
-                                                class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Company</label>
-                                            <input type="text" name="hs-company-hire-us-1"
-                                                id="hs-company-hire-us-1"
-                                                class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
-                                        </div>
-
-                                        <div>
-                                            <label for="hs-company-website-hire-us-1"
-                                                class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Company
-                                                Website</label>
-                                            <input type="text" name="hs-company-website-hire-us-1"
-                                                id="hs-company-website-hire-us-1"
-                                                class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
-                                        </div>
+                                    <div>
+                                        <label for="ctnSelect1"
+                                            class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">How's
+                                            the Service?</label>
+                                        <select name="service" id="ctnSelect1"
+                                            class="form-select text-white-dark" required>
+                                            <option disabled selected>Select your ratings</option>
+                                            <option value="Excellent">Excellent</option>
+                                            <option value="Good">Good</option>
+                                            <option value="Fair">Fair</option>
+                                            <option value="Poor">Poor</option>
+                                            <option value="Bad">Bad</option>
+                                        </select>
                                     </div>
-                                    <!-- End Grid -->
-
                                     <div>
                                         <label for="hs-about-hire-us-1"
-                                            class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Details</label>
-                                        <textarea id="hs-about-hire-us-1" name="hs-about-hire-us-1" rows="4"
+                                            class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Send
+                                            a Review</label>
+                                        <textarea id="hs-about-hire-us-1" name="reviews" rows="4"
                                             class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"></textarea>
                                     </div>
                                 </div>
                                 <!-- End Grid -->
 
-                                <!-- Checkbox -->
-                                <div class="mt-3 flex">
-                                    <div class="flex">
-                                        <input id="remember-me" name="remember-me" type="checkbox"
-                                            class="shrink-0 mt-1.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                                    </div>
-                                    <div class="ms-3">
-                                        <label for="remember-me"
-                                            class="text-sm text-gray-600 dark:text-gray-400">By submitting this
-                                            form I have read and acknowledged the <a
-                                                class="text-blue-600 decoration-2 hover:underline font-medium"
-                                                href="#">Privacy policy</a></label>
-                                    </div>
-                                </div>
-                                <!-- End Checkbox -->
-
                                 <div class="mt-6 grid">
                                     <button type="submit"
-                                        class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Send
-                                        inquiry</button>
+                                        class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#9c603b] text-white hover:bg-orange-900 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Submit
+                                        Reviews</button>
                                 </div>
                             </form>
-
-                            <div class="mt-3 text-center">
-                                <p class="text-sm text-gray-500">
-                                    We'll get back to you in 1-2 business days.
-                                </p>
-                            </div>
                         </div>
                         <!-- End Card -->
                     </div>
@@ -926,95 +1243,133 @@
     </div>
 </div>
 
+<!-- End Blog Article -->
+<section>
+    <footer class="bg-gray-900 w-full">
+        <div class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+            <!-- Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="col-span-full lg:col-span-1">
+                    <a class="flex-none text-xl font-semibold text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        href="#" aria-label="Anaa Hotel & Restaurant">Anaa Hotel & Restaurant</a>
+                </div>
+                <!-- End Col -->
 
+                <div class="col-span-1">
+                    <h4 class="font-semibold text-gray-100">Product</h4>
 
+                    <div class="mt-3 grid space-y-3">
+                        <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">Pricing</a></p>
+                        <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">Changelog</a></p>
+                        <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">Docs</a></p>
+                    </div>
+                </div>
+                <!-- End Col -->
 
-<!-- ================ start footer Area ================= -->
-<footer class="footer-area section-gap">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-                <h4>Top Products</h4>
-                <ul>
-                    <li><a href="#">Managed Website</a></li>
-                    <li><a href="#">Manage Reputation</a></li>
-                    <li><a href="#">Power Tools</a></li>
-                    <li><a href="#">Marketing Service</a></li>
-                </ul>
-            </div>
-            <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Brand Assets</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-                <h4>Features</h4>
-                <ul>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Brand Assets</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Guides</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">Experts</a></li>
-                    <li><a href="#">Agencies</a></li>
-                </ul>
-            </div>
-            <div class="col-xl-4 col-md-8 mb-4 mb-xl-0 single-footer-widget">
-                <h4>Newsletter</h4>
-                <p>You can trust us. we only send promo offers,</p>
-                <div class="form-wrap" id="mc_embed_signup">
-                    <form target="_blank"
-                        action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                        method="get" class="form-inline">
-                        <input class="form-control" name="EMAIL" placeholder="Your Email Address"
-                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
-                            required="" type="email">
-                        <button class="click-btn btn btn-default text-uppercase">subscribe</button>
-                        <div style="position: absolute; left: -5000px;">
-                            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                type="text">
+                <div class="col-span-1">
+                    <h4 class="font-semibold text-gray-100">Company</h4>
+
+                    <div class="mt-3 grid space-y-3">
+                        <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">About us</a></p>
+                        <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">Blog</a></p>
+                        <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">Careers</a> <span
+                                class="inline ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">We're
+                                hiring</span></p>
+                        <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">Customers</a></p>
+                    </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-span-2">
+                    <h4 class="font-semibold text-gray-100">Stay up to date</h4>
+
+                    <form>
+                        <div
+                            class="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2 dark:bg-gray-800">
+                            <div class="w-full">
+                                <label for="hero-input" class="sr-only">Search</label>
+                                <input type="text" id="hero-input" name="hero-input"
+                                    class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
+                                    placeholder="Enter your email">
+                            </div>
+                            <a class="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                href="#">
+                                Subscribe
+                            </a>
                         </div>
-
-                        <div class="info"></div>
+                        <p class="mt-3 text-sm text-gray-400">
+                            New UI kits or big discounts. Never spam.
+                        </p>
                     </form>
                 </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Grid -->
+
+            <div class="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+                <div class="flex justify-between items-center">
+                    <p class="text-sm text-gray-400">© 2022 Preline. All rights reserved.</p>
+                </div>
+                <!-- End Col -->
+
+                <!-- Social Brands -->
+                <div>
+                    <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
+                        href="#">
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                    </a>
+                    <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
+                        href="#">
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                        </svg>
+                    </a>
+                    <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
+                        href="#">
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                        </svg>
+                    </a>
+                    <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
+                        href="#">
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                    <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
+                        href="#">
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- End Social Brands -->
             </div>
         </div>
-        <div class="footer-bottom row align-items-center text-center text-lg-left">
-
-            <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- ================ End footer Area ================= -->
-
-
+    </footer>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
-<script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="vendors/magnefic-popup/jquery.magnific-popup.min.js"></script>
-<script src="vendors/easing.min.js"></script>
-<script src="vendors/superfish.min.js"></script>
-<script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-<script src="vendors/jquery.ajaxchimp.min.js"></script>
-<script src="vendors/mail-script.js"></script>
-<script src="js/main.js"></script>
+
 <script>
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -1040,46 +1395,60 @@
 </script>
 <script>
     document.getElementById('duration').addEventListener('change', function() {
-    var selectedDuration = parseInt(this.value); // Get the selected duration as an integer
-    var price = 0; // Initialize the price variable
+        var selectedDuration = parseInt(this.value); // Get the selected duration as an integer
+        var price = 0; // Initialize the price variable
 
-    // Set the price based on the selected duration
-    switch(selectedDuration) {
-        case 3:
-            price = 800;
-            break;
-        case 6:
-            price = 1200;
-            break;
-        case 12:
-            price = 1800;
-            break;
-        case 24:
-            price = 2300;
-            break;
-        default:
-            price = 0; // Default to 0 if no duration is selected
-    }
+        // Set the price based on the selected duration
+        switch (selectedDuration) {
+            case 3:
+                price = 800;
+                break;
+            case 6:
+                price = 1200;
+                break;
+            case 12:
+                price = 1800;
+                break;
+            case 24:
+                price = 2300;
+                break;
+            default:
+                price = 0; // Default to 0 if no duration is selected
+        }
 
-    // Update the value of the price input field
-    document.getElementById('price').value = price;
+        // Update the value of the price input field
+        document.getElementById('price').value = price;
+    });
+    document.getElementById('btnBook').addEventListener('click', function() {
+        document.getElementById('regular').classList.add('hidden');
+        document.getElementById('spin').classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('2nd').classList.remove('hidden');
+            document.getElementById('1st').classList.add('hidden');
+            document.getElementById('spin').classList.add('hidden');
+            document.getElementById('regular').classList.remove('hidden');
+        }, 2000);
+    });
+    document.getElementById('back').addEventListener('click', function() {
+        setTimeout(() => {
+            document.getElementById('2nd').classList.add('hidden');
+            document.getElementById('1st').classList.remove('hidden');
+        }, 2000);
+    })  
+</script>
+<script>
+    document.getElementById('terms-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior (navigation)
+
+    // Show the modal
+    document.getElementById('modal').classList.remove('hidden');
 });
-document.getElementById('btnBook').addEventListener('click', function(){
-  document.getElementById('regular').classList.add('hidden');
-    document.getElementById('spin').classList.remove('hidden');
-    setTimeout(() => {
-        document.getElementById('2nd').classList.remove('hidden');
-        document.getElementById('1st').classList.add('hidden');
-        document.getElementById('spin').classList.add('hidden');
-        document.getElementById('regular').classList.remove('hidden');
-    }, 2000);
+
+document.getElementById('close-modal').addEventListener('click', function() {
+    // Hide the modal when close button is clicked
+    document.getElementById('modal').classList.add('hidden');
 });
-document.getElementById('back').addEventListener('click', function(){
-  setTimeout(() => {
-    document.getElementById('2nd').classList.add('hidden');
-        document.getElementById('1st').classList.remove('hidden');
-  }, 2000);
-})
+
 </script>
 </body>
 

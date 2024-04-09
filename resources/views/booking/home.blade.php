@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -67,12 +66,59 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item active"><a class="nav-link" href="{{url('/')}}">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="{{url('about')}}">About</a></li>
-            
+                            <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('') }}">Rooms</a></li>
+                        </ul>
+
                     </div>
 
-                    <ul class="social-icons ml-auto">
+                    <ul class="social-icons ml-auto flex">
+                        @if (Route::has('login'))
+                            @auth
+
+                                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                                    class="mr-4 nav-item flex text-white items-center "
+                                    type="button">{{Auth::user()->name}}<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
+                                    </svg>
+                                </button>
+
+                                <!-- Dropdown menu -->
+                                <div id="dropdown"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                    <ul class="py-2 text-sm text-center text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDefaultButton">
+                                        <li class="flex items-center">
+                                            @csrf
+                                            <a href="{{ url('user-profile') }}">Avail VIP</a>
+                                        </li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            <li class="flex items-center">
+                                                @csrf
+                                                <a class="py-2 flex items-center" href="{{ route('logout')}}" onclick="event.preventDefault();
+                                                        this.closest('form').submit();" class=" text-danger !py-3" @click="toggle">
+                                                    <svg class="mr-2 w-4.5 h-4.5 ltr:mr-2 rtl:ml-2 rotate-90" width="18" height="18"
+                                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.5"
+                                                            d="M17 9.00195C19.175 9.01406 20.3529 9.11051 21.1213 9.8789C22 10.7576 22 12.1718 22 15.0002V16.0002C22 18.8286 22 20.2429 21.1213 21.1215C20.2426 22.0002 18.8284 22.0002 16 22.0002H8C5.17157 22.0002 3.75736 22.0002 2.87868 21.1215C2 20.2429 2 18.8286 2 16.0002L2 15.0002C2 12.1718 2 10.7576 2.87868 9.87889C3.64706 9.11051 4.82497 9.01406 7 9.00195"
+                                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                                        <path d="M12 15L12 2M12 2L15 5.5M12 2L9 5.5" stroke="currentColor"
+                                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    Sign Out
+                                                </a>
+                                            </li>
+                                        </form>
+                                        
+                                    </ul>
+                                </div>
+                            @else
+                                <li class="nav-item"><a class="nav-link" href="{{ url('login') }}">Login</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url('register') }}">Register</a></li>
+                            @endauth
+                        @endif
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -104,7 +150,7 @@
 
 
         <!-- ================ start banner form ================= -->
-       
+
         <!-- ================ end banner form ================= -->
 
         <!-- ================ welcome section start ================= -->
@@ -154,27 +200,30 @@
                     <div class="section-intro__style">
                         <img src="img/home/bed-icon.png" alt="">
                     </div>
-                    <h2>Explore Our Rooms</h2>
+                    <h2>Rooms Available</h2>
                 </div>
 
                 <div class="row">
-                    @foreach($rooms as $room)
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <div class="card card-explore">
-                            <div class="card-explore__img">
-                                <img class="card-img" src="{{asset($room->roomImages[0]->images)}}" alt="">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-explore__price">{{$room->roomPrice->three_hours}} <sub>/ 3 hours</sub></h3>
-                                <h4 class="card-explore__title"><a href="{{ url('booknowIndex/'.$room->id) }}">{{$room->RoomType}}</a></h4>
-                                <p>{{$room->Description}}</p>
-                                <a class="card-explore__link" href="{{ url('booknowIndex/'.$room->id) }}">Book Now <i
-                                        class="ti-arrow-right"></i></a>
+                    @foreach ($rooms as $room)
+                        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                            <div class="card card-explore">
+                                <div class="card-explore__img">
+                                    <img class="card-img" src="{{ asset($room->roomImages[0]->images) }}"
+                                        alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-explore__price">₱ {{ $room->roomPrice->three_hours }}
+                                        <sub>{{ $room->RoomNumber }}</sub></h3>
+                                    <h4 class="card-explore__title"><a
+                                            href="{{ url('booknowIndex/' . $room->id) }}">{{ $room->RoomType }}</a></h4>
+                                    <p>{{ $room->Description }}</p>
+                                    <a class="card-explore__link" href="{{ url('booknowIndex/' . $room->id) }}">Book
+                                        Now <i class="ti-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
-                    
+
                 </div>
             </div>
         </section>
@@ -183,7 +232,7 @@
 
 
         <!-- ================ video section start ================= -->
-       
+
         <!-- ================ video section end ================= -->
 
         <!-- ================ special section start ================= -->
@@ -222,11 +271,12 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <p>Private bathroom with shower/tub combination. Fresh towels and basic toiletries. Air conditioning/heating controls</p>
+                                <p>Private bathroom with shower/tub combination. Fresh towels and basic toiletries. Air
+                                    conditioning/heating controls</p>
                             </div>
                         </div>
                     </div>
-                    <div class="con1 hide col-md-6 col-lg-4 mb-4 mb-lg-0">Private bathroom with shower/tub combination
+                    <div class="con1 hide col-md-6 col-lg-4 mb-4 mb-lg-0">
                         <div class="card card-special">
                             <div class="media align-items-center mb-1">
                                 <span class="card-special__icon"><i class="ti-home"></i></span>
@@ -235,7 +285,8 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <p>Private bathroom with shower/tub combination Comfortable bed(s). Private bathroom with shower/tub combination</p>
+                                <p>Private bathroom with shower/tub combination Comfortable bed(s). Private bathroom
+                                    with shower/tub combination</p>
                             </div>
                         </div>
                     </div>
@@ -248,7 +299,8 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <p>Wheelchair-accessible features (e.g., wider doorways, roll-in shower). Comfortable bed(s). Private bathroom with shower/tub combination</p>
+                                <p>Wheelchair-accessible features (e.g., wider doorways, roll-in shower). Comfortable
+                                    bed(s). Private bathroom with shower/tub combination</p>
                             </div>
                         </div>
                     </div>
@@ -303,7 +355,9 @@
                                 <img src="img/home/testimonial1.png" alt="">
                             </div>
                             <div class="media-body">
-                                <p>Hotels that prioritize guest safety and security, with measures such as well-lit parking areas, security personnel, and secure key card access, receive high marks from guests.</p>
+                                <p>Hotels that prioritize guest safety and security, with measures such as well-lit
+                                    parking areas, security personnel, and secure key card access, receive high marks
+                                    from guests.</p>
                                 <div class="testi-carousel__intro">
                                     <h3>Robert Mack</h3>
                                     <p>guest</p>
@@ -318,7 +372,8 @@
                                 <img src="img/home/testimonial2.png" alt="">
                             </div>
                             <div class="media-body">
-                                <p> Hotels located in convenient or picturesque locations, close to attractions, transportation hubs, or business centers, are highly valued by guests.</p>
+                                <p> Hotels located in convenient or picturesque locations, close to attractions,
+                                    transportation hubs, or business centers, are highly valued by guests.</p>
                                 <div class="testi-carousel__intro">
                                     <h3>David Alone</h3>
                                     <p>guest</p>
@@ -333,7 +388,8 @@
                                 <img src="img/home/testimonial3.png" alt="">
                             </div>
                             <div class="media-body">
-                                <p>Comfortable beds, cozy linens, and well-appointed rooms contribute to a relaxing and enjoyable stay.</p>
+                                <p>Comfortable beds, cozy linens, and well-appointed rooms contribute to a relaxing and
+                                    enjoyable stay.</p>
                                 <div class="testi-carousel__intro">
                                     <h3>Adam Pallin</h3>
                                     <p>guest</p>
@@ -348,7 +404,8 @@
                                 <img src="img/home/testimonial1.png" alt="">
                             </div>
                             <div class="media-body">
-                                <p> Guests often appreciate hotels that offer a range of amenities such as a gym, spa, pool, restaurants, and business facilities, enhancing their overall experience.</p>
+                                <p> Guests often appreciate hotels that offer a range of amenities such as a gym, spa,
+                                    pool, restaurants, and business facilities, enhancing their overall experience.</p>
                                 <div class="testi-carousel__intro">
                                     <h3>Robert Mack</h3>
                                     <p>guest</p>
@@ -506,7 +563,7 @@
             </div>
         </section>
         <!-- ================ news section end ================= -->
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     </main>
 
 
@@ -529,20 +586,20 @@
                     <h4>Contributors</h4>
                     <ul>
                         <li><a href="#">All rigths reserved by ANAA corporation 2024</a></li>
-                        
+
                     </ul>
                 </div>
-               
-            
-                
 
-                            <div class="info"></div>
-                        </form>
-                    </div>
-                </div>
+
+
+
+                <div class="info"></div>
+                </form>
             </div>
-            
-            </div>
+        </div>
+        </div>
+
+        </div>
         </div>
     </footer>
     <!-- ================ End footer Area ================= -->

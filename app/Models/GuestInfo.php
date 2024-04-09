@@ -18,7 +18,6 @@ class GuestInfo extends Model
         'child_no',
         'contact_no',
         'guest_id',
-        'id_number',
         'room_type',
         'room_number',
         'room_service',

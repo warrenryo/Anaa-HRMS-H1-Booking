@@ -231,6 +231,8 @@
                                     <span class="badge bg-info">{{ $rooms->RoomStatus }}</span>
                                 @elseif($rooms->RoomStatus == 'Dirty')
                                     <span class="badge bg-orange-700">{{ $rooms->RoomStatus }}</span>
+                                @elseif($rooms->RoomStatus == 'Checkout')
+                                    <span class="badge bg-dark">{{ $rooms->RoomStatus }}</span>
                                 @else
                                     <span>{{ $rooms->RoomStatus }}</span>
                                 @endif

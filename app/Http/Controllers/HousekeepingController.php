@@ -12,11 +12,11 @@ class HousekeepingController extends Controller
 {
     public function housekeeping(Request $request){
         $rooms = RoomDetails::where('RoomStatus', 'Dirty')->get();
-        $request = HousekeepingRequest::when($request['filter_status'] != null, function($q) use($request){
+        $requests = HousekeepingRequest::when($request['filter_status'] != null, function($q) use($request){
             return $q->where('status', $request['filter_status'])->orderBy('id','DESC');
         })->orderBy('id', 'DESC')->paginate(10);
 
-        return view('housekeeping.housekeepingIndex', compact('rooms'));
+        return view('housekeeping.housekeepingIndex', compact('rooms', 'requests'));
     }
 
     public function submitHousekeeping(Request $request){

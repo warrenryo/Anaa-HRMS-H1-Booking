@@ -13,10 +13,14 @@ return new class extends Migration
     {
         Schema::create('hrms_users', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_code');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('role');
+            $table->string('vip')->nullable();
+            $table->integer('points')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

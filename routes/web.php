@@ -24,6 +24,8 @@ use App\Http\Controllers\HousekeepingController;
 use App\Http\Controllers\ActiveBookingsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\OccupiedController;
+use App\Http\Controllers\Reviews\ReviewController;
+use App\Http\Controllers\VIPController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,20 +38,28 @@ use App\Http\Controllers\OccupiedController;
 |
 */
 
-Route::get('/',[HomeBookController::class,'homebook']);
+Route::get('/', [HomeBookController::class, 'bookingSide']);
+Route::get('view-all-rooms', [HomeBookController::class, 'allRooms']);
 
 
 
 
 
-Route::get('/dashboard', [DashboardController::class, "index"])->middleware(['auth', 'verified'])->name('dashboard');
 
 
 //NORMAL CALLING
 
 //BOOKING
-Route::get('/booknowIndex/{id}',[BookNowController::class,'book_now']);
+Route::get('/booknowIndex/{id}', [BookNowController::class, 'book_now']);
 Route::get('/booking-form', [BookNowController::class, 'book']);
+Route::get('booking-confirmation/{id}', [BookNowController::class, 'bookingConfirmation']);
+
+//AVAIL VIP
+Route::get('user-profile', [VIPController::class, 'index']);
+Route::get('get-loyalty', [VIPController::class, 'getLoyalty']);
+
+//REVIEWS
+Route::post('/submit-reviews/{id}', [ReviewController::class, 'submitReview']);
 
 
 Route::middleware('auth')->group(function () {
@@ -58,77 +68,78 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'verified'])->group(function(){
-    //PLACE YOUR ROUTES HERE FOR VERIFIED USER
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::middleware(['auth', 'verified'])->group(function () {
+        //PLACE YOUR ROUTES HERE FOR VERIFIED USER
+
+        Route::get('/dashboard', [DashboardController::class, "index"])->name('dashboard');
+        //APPS
+        Route::get('apps-todolist', [HomeController::class, 'todolist']);
+        Route::get('frontdesk', [FrontdeskController::class, 'index']);
+        Route::post('submit-room',  [FrontdeskController::class, 'createFrontdesk']);
+
+        //ROOM DETAILS
+        Route::get('room-details', [RoomDetailsController::class, 'roomDetailsIndex']);
+        Route::post('submit-room-details', [RoomDetailsController::class, 'addRoomDetails']);
+        Route::get('edit-room-details/{id}', [RoomDetailsController::class, 'edtiRoomDetails']);
+        Route::get('delete-image/{id}', [RoomDetailsController::class, 'deleteImage']);
+        Route::put('update-room-details/{id}', [RoomDetailsController::class, 'updateRoomDetails']);
+        Route::post('update-room-status/{id}/{type_id}', [RoomDetailsController::class, 'updateRoomStatus']);
+        Route::get('delete-room-details/{id}', [RoomDetailsController::class, 'deleteRoomDetails']);
 
 
-    //APPS
-    Route::get('apps-todolist', [HomeController::class, 'todolist']);
-    Route::get('frontdesk', [FrontdeskController::class, 'index']);
-    Route::post('submit-room',  [FrontdeskController::class, 'createFrontdesk']);
-
-    //ROOM DETAILS
-    Route::get('room-details', [RoomDetailsController::class, 'roomDetailsIndex']);
-    Route::post('submit-room-details', [RoomDetailsController::class, 'addRoomDetails']);
-    Route::get('edit-room-details/{id}', [RoomDetailsController::class, 'edtiRoomDetails']);
-    Route::get('delete-image/{id}', [RoomDetailsController::class, 'deleteImage']);
-    Route::put('update-room-details/{id}', [RoomDetailsController::class, 'updateRoomDetails']);
-    Route::post('update-room-status/{id}/{type_id}', [RoomDetailsController::class, 'updateRoomStatus']);
-    Route::get('delete-room-details/{id}', [RoomDetailsController::class, 'deleteRoomDetails']);
-
-
-    //HOUSEKEEPING 
-    Route::get('housekeeping',[HousekeepingController::class,'housekeeping']);
-    Route::post('submit-housekeeping-request', [HousekeepingController::class, 'submitHousekeeping']);
+        //HOUSEKEEPING 
+        Route::get('housekeeping', [HousekeepingController::class, 'housekeeping']);
+        Route::post('submit-housekeeping-request', [HousekeepingController::class, 'submitHousekeeping']);
 
 
 
-    //BOOKING SIDE
-    Route::get('book', [BookingSideController::class, 'book']);
+        //BOOKING SIDE
+        Route::get('book', [BookingSideController::class, 'book']);
+        Route::get('booking-details', [BookingSideController::class, 'bookingDetails']);
 
 
-    //Frontdesk
+        //Frontdesk
 
-    Route::get('active-bookings',[ActiveBookingsController::class,'index']);
-    Route::get('occupied', [OccupiedController::class, "occupied"]);
+        Route::get('active-bookings', [ActiveBookingsController::class, 'index']);
+        Route::get('occupied', [OccupiedController::class, "occupied"]);
 
-    Route::get('add-booking',[BookingController::class,'book']);
-    Route::post('add-booking',[BookingController::class,'book']);
+        Route::get('add-booking', [BookingController::class, 'book']);
+        Route::post('add-booking', [BookingController::class, 'book']);
 
-    Route::get('appoint',[Calendar::class,'events']);
+        Route::get('appoint', [Calendar::class, 'events']);
 
-    Route::get('check-out-bookings',[CheckOutBookings::class,'checkout']);
+        Route::get('check-out-bookings', [CheckOutBookings::class, 'index']);
+        Route::get('checkout-guest/{id}', [CheckOutBookings::class, 'checkout']);
 
-    Route::get('services',[Services::class,'serve']);
-   
-
-    //SAMPLE
-
-    
+        Route::get('services', [Services::class, 'serve']);
 
 
-    //BOOK CLIENT
-    Route::post('book-client', [BookClientController::class, 'addClient']);
-    Route::post('submit-frontdesk-assigned-room', [BookClientController::class, 'submitAssignedRoom']);
-
-    //LANDING
-
-    Route::get('about',[AboutController::class,'about']);
-     Route::get('properties',[AboutController::class,'properties']);
-     Route::get('gallery',[AboutController::class,'gallery']);
-     Route::get('blogs',[AboutController::class,'blogs']);
-     Route::get('blogdetails',[AboutController::class,'blogdetails']);
-     Route::get('contact',[AboutController::class,'contact']);
-
-    //Anaa Booking
+        //SAMPLE
 
 
-    //Anaa Room Management
-    Route::get('room-ds',[RoomDesController::class,'room_ds']);
-   
-    
 
-    
+
+        //BOOK CLIENT
+        Route::post('book-client', [BookClientController::class, 'addClient']);
+        Route::post('submit-frontdesk-assigned-room', [BookClientController::class, 'submitAssignedRoom']);
+
+        //LANDING
+
+        Route::get('about', [AboutController::class, 'about']);
+        Route::get('properties', [AboutController::class, 'properties']);
+        Route::get('gallery', [AboutController::class, 'gallery']);
+        Route::get('blogs', [AboutController::class, 'blogs']);
+        Route::get('blogdetails', [AboutController::class, 'blogdetails']);
+        Route::get('contact', [AboutController::class, 'contact']);
+
+        //Anaa Booking
+
+
+        //Anaa Room Management
+        Route::get('room-ds', [RoomDesController::class, 'room_ds']);
+    });
 });
 
-require __DIR__.'/auth.php';
+
+require __DIR__ . '/auth.php';

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->integer('child_no');
             $table->bigInteger('contact_no');
             $table->string('guest_id')->nullable();
-            $table->string('id_number')->nullable();
             $table->string('room_type');
             $table->string('room_number');
             $table->string('room_service');

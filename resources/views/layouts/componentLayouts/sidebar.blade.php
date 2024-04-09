@@ -23,7 +23,8 @@
             <ul class="perfect-scrollbar relative font-semibold space-y-0.5 h-[calc(100vh-80px)] overflow-y-auto overflow-x-hidden  p-4 py-0"
                 x-data="{ activeDropdown: null }">
                 <li class="nav-item">
-                    <a class="{{request()->is('/dashboard') ? 'active' : ' ' }}" href="{{('/dashboard') }}" class="group">
+                    <a class="{{ request()->is('/dashboard') ? 'active' : ' ' }}" href="{{ '/dashboard' }}"
+                        class="group">
                         <div class="flex items-center">
 
                             <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24"
@@ -51,11 +52,11 @@
                     </svg>
                     <span>Frontdesk</span>
                 </h2>
-<!---
+                <!---
                 <li class="nav-item">
                     <ul>
                         <li class="nav-item">
-                            <a class="{{request()->is('/frontdesk') ? 'active' : ' ' }}" href="{{('/frontdesk') }}" class="group">
+                            <a class="{{ request()->is('/frontdesk') ? 'active' : ' ' }}" href="{{ '/frontdesk' }}" class="group">
                                 <div class="flex items-center">
 
                                     <svg class="group-hover:!text-primary" width="20" height="20"
@@ -73,164 +74,147 @@
                             </a>
                         </li>
                     -->
-                        <li class="nav-item">
-                                <a class="{{request()->is('/room-details') ? 'active' : ' ' }}" href="{{('/room-details') }}" class="group">
+                <li class="nav-item">
+                    <a class="{{ request()->is('/room-details') ? 'active' : ' ' }}" href="{{ '/room-details' }}"
+                        class="group">
 
-                                <div class="flex items-center">
+                        <div class="flex items-center">
 
-                                    <svg class="group-hover:!text-primary" width="20" height="20"
-                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24 5C24 6.65685 22.6569 8 21 8C19.3431 8 18 6.65685 18 5C18 3.34315 19.3431 2 21 2C22.6569 2 24 3.34315 24 5Z"
-                                            fill="#9C603B" />
-                                        <path
-                                            d="M17.2339 7.46394L15.6973 8.74444C14.671 9.59966 13.9585 10.1915 13.357 10.5784C12.7747 10.9529 12.3798 11.0786 12.0002 11.0786C11.6206 11.0786 11.2258 10.9529 10.6435 10.5784C10.0419 10.1915 9.32941 9.59966 8.30315 8.74444L5.92837 6.76546C5.57834 6.47377 5.05812 6.52106 4.76643 6.87109C4.47474 7.22112 4.52204 7.74133 4.87206 8.03302L7.28821 10.0465C8.2632 10.859 9.05344 11.5176 9.75091 11.9661C10.4775 12.4334 11.185 12.7286 12.0002 12.7286C12.8154 12.7286 13.523 12.4334 14.2495 11.9661C14.947 11.5176 15.7372 10.859 16.7122 10.0465L18.3785 8.65795C17.9274 8.33414 17.5388 7.92898 17.2339 7.46394Z"
-                                            fill="#9C603B" />
-                                        <path
-                                            d="M18.4538 6.58719C18.7362 6.53653 19.0372 6.63487 19.234 6.87109C19.3965 7.06614 19.4538 7.31403 19.4121 7.54579C19.0244 7.30344 18.696 6.97499 18.4538 6.58719Z"
-                                            fill="#9C603B" />
-                                        <path opacity="0.5"
-                                            d="M16.9576 3.02099C16.156 3 15.2437 3 14.2 3H9.8C5.65164 3 3.57746 3 2.28873 4.31802C1 5.63604 1 7.75736 1 12C1 16.2426 1 18.364 2.28873 19.682C3.57746 21 5.65164 21 9.8 21H14.2C18.3484 21 20.4225 21 21.7113 19.682C23 18.364 23 16.2426 23 12C23 10.9326 23 9.99953 22.9795 9.1797C22.3821 9.47943 21.7103 9.64773 21 9.64773C18.5147 9.64773 16.5 7.58722 16.5 5.04545C16.5 4.31904 16.6646 3.63193 16.9576 3.02099Z"
-                                            fill="#9C603B" />
-                                    </svg>
-                                    <span
-                                        class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Room
-                                        Details</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu nav-item">
-                            <button type="button" class="nav-link group"
-                                :class="{ 'active': activeDropdown === 'invoice' }"
-                                @click="activeDropdown === 'invoice' ? activeDropdown = null : activeDropdown = 'invoice'">
-                                <div class="flex items-center">
-
-                                    <svg class="group-hover:!text-primary" width="20" height="20"
-                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                                            fill="#9C603B" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M12 5.25C12.4142 5.25 12.75 5.58579 12.75 6V6.31673C14.3804 6.60867 15.75 7.83361 15.75 9.5C15.75 9.91421 15.4142 10.25 15 10.25C14.5858 10.25 14.25 9.91421 14.25 9.5C14.25 8.82154 13.6859 8.10339 12.75 7.84748V11.3167C14.3804 11.6087 15.75 12.8336 15.75 14.5C15.75 16.1664 14.3804 17.3913 12.75 17.6833V18C12.75 18.4142 12.4142 18.75 12 18.75C11.5858 18.75 11.25 18.4142 11.25 18V17.6833C9.61957 17.3913 8.25 16.1664 8.25 14.5C8.25 14.0858 8.58579 13.75 9 13.75C9.41421 13.75 9.75 14.0858 9.75 14.5C9.75 15.1785 10.3141 15.8966 11.25 16.1525V12.6833C9.61957 12.3913 8.25 11.1664 8.25 9.5C8.25 7.83361 9.61957 6.60867 11.25 6.31673V6C11.25 5.58579 11.5858 5.25 12 5.25ZM11.25 7.84748C10.3141 8.10339 9.75 8.82154 9.75 9.5C9.75 10.1785 10.3141 10.8966 11.25 11.1525V7.84748ZM14.25 14.5C14.25 13.8215 13.6859 13.1034 12.75 12.8475V16.1525C13.6859 15.8966 14.25 15.1785 14.25 14.5Z"
-                                            fill="#9C603B" />
-                                    </svg>
-                                    <span
-                                        class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Manage
-                                        Bookings</span>
-                                </div>
-                                <div class="rtl:rotate-180" :class="{ '!rotate-90': activeDropdown === 'invoice' }">
-
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 5L15 12L9 19" stroke="#9C603B" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </button>
-                            <ul x-cloak x-show="activeDropdown === 'invoice'" x-collapse
-                                class="sub-menu text-gray-500">
-                                <li>
-                                    <a href="{{ url('active-bookings') }}">Active Bookings</a>
-                                    
-                                </li>
-                                <li>
-                                    <a href="{{ url('occupied') }}">Occupied</a>
-                                </li>
-
-                                <li>
-                                    <a href="{{ url('check-out-bookings') }}">Check-Out Bookings</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('add-booking') }}">Add Booking</a>
-                                </li>
-                                <li>
-                                    <a href="/apps/invoice/edit">All Bookings</a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-
-
-                        <h2
-                            class="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
-
-                            <svg class="w-4 h-5 flex-none hidden" viewBox="0 0 24 24" stroke="#9C603B"
-                                stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 5C24 6.65685 22.6569 8 21 8C19.3431 8 18 6.65685 18 5C18 3.34315 19.3431 2 21 2C22.6569 2 24 3.34315 24 5Z"
+                                    fill="#9C603B" />
+                                <path
+                                    d="M17.2339 7.46394L15.6973 8.74444C14.671 9.59966 13.9585 10.1915 13.357 10.5784C12.7747 10.9529 12.3798 11.0786 12.0002 11.0786C11.6206 11.0786 11.2258 10.9529 10.6435 10.5784C10.0419 10.1915 9.32941 9.59966 8.30315 8.74444L5.92837 6.76546C5.57834 6.47377 5.05812 6.52106 4.76643 6.87109C4.47474 7.22112 4.52204 7.74133 4.87206 8.03302L7.28821 10.0465C8.2632 10.859 9.05344 11.5176 9.75091 11.9661C10.4775 12.4334 11.185 12.7286 12.0002 12.7286C12.8154 12.7286 13.523 12.4334 14.2495 11.9661C14.947 11.5176 15.7372 10.859 16.7122 10.0465L18.3785 8.65795C17.9274 8.33414 17.5388 7.92898 17.2339 7.46394Z"
+                                    fill="#9C603B" />
+                                <path
+                                    d="M18.4538 6.58719C18.7362 6.53653 19.0372 6.63487 19.234 6.87109C19.3965 7.06614 19.4538 7.31403 19.4121 7.54579C19.0244 7.30344 18.696 6.97499 18.4538 6.58719Z"
+                                    fill="#9C603B" />
+                                <path opacity="0.5"
+                                    d="M16.9576 3.02099C16.156 3 15.2437 3 14.2 3H9.8C5.65164 3 3.57746 3 2.28873 4.31802C1 5.63604 1 7.75736 1 12C1 16.2426 1 18.364 2.28873 19.682C3.57746 21 5.65164 21 9.8 21H14.2C18.3484 21 20.4225 21 21.7113 19.682C23 18.364 23 16.2426 23 12C23 10.9326 23 9.99953 22.9795 9.1797C22.3821 9.47943 21.7103 9.64773 21 9.64773C18.5147 9.64773 16.5 7.58722 16.5 5.04545C16.5 4.31904 16.6646 3.63193 16.9576 3.02099Z"
+                                    fill="#9C603B" />
                             </svg>
-                            <span>Room Management</span>
-                        </h2>
+                            <span
+                                class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Room
+                                Details</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu nav-item">
+                    <button type="button" class="nav-link group" :class="{ 'active': activeDropdown === 'invoice' }"
+                        @click="activeDropdown === 'invoice' ? activeDropdown = null : activeDropdown = 'invoice'">
+                        <div class="flex items-center">
 
-                        <li class="nav-item">
-                                <a class="{{request()->is('/room-ds') ? 'active' : ' ' }}" href="{{('/room-ds') }}" class="group">
+                            <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                    fill="#9C603B" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 5.25C12.4142 5.25 12.75 5.58579 12.75 6V6.31673C14.3804 6.60867 15.75 7.83361 15.75 9.5C15.75 9.91421 15.4142 10.25 15 10.25C14.5858 10.25 14.25 9.91421 14.25 9.5C14.25 8.82154 13.6859 8.10339 12.75 7.84748V11.3167C14.3804 11.6087 15.75 12.8336 15.75 14.5C15.75 16.1664 14.3804 17.3913 12.75 17.6833V18C12.75 18.4142 12.4142 18.75 12 18.75C11.5858 18.75 11.25 18.4142 11.25 18V17.6833C9.61957 17.3913 8.25 16.1664 8.25 14.5C8.25 14.0858 8.58579 13.75 9 13.75C9.41421 13.75 9.75 14.0858 9.75 14.5C9.75 15.1785 10.3141 15.8966 11.25 16.1525V12.6833C9.61957 12.3913 8.25 11.1664 8.25 9.5C8.25 7.83361 9.61957 6.60867 11.25 6.31673V6C11.25 5.58579 11.5858 5.25 12 5.25ZM11.25 7.84748C10.3141 8.10339 9.75 8.82154 9.75 9.5C9.75 10.1785 10.3141 10.8966 11.25 11.1525V7.84748ZM14.25 14.5C14.25 13.8215 13.6859 13.1034 12.75 12.8475V16.1525C13.6859 15.8966 14.25 15.1785 14.25 14.5Z"
+                                    fill="#9C603B" />
+                            </svg>
+                            <span
+                                class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Manage
+                                Bookings</span>
+                        </div>
+                        <div class="rtl:rotate-180" :class="{ '!rotate-90': activeDropdown === 'invoice' }">
 
-                                <div class="flex items-center">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5L15 12L9 19" stroke="#9C603B" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <ul x-cloak x-show="activeDropdown === 'invoice'" x-collapse class="sub-menu text-gray-500">
+                        <li>
+                            <a href="{{ url('active-bookings') }}">Active Bookings</a>
 
-                                    <svg class="group-hover:!text-primary" width="20" height="20"
-                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6.94028 2C7.35614 2 7.69326 2.32421 7.69326 2.72414V4.18487C8.36117 4.17241 9.10983 4.17241 9.95219 4.17241H13.9681C14.8104 4.17241 15.5591 4.17241 16.227 4.18487V2.72414C16.227 2.32421 16.5641 2 16.98 2C17.3958 2 17.733 2.32421 17.733 2.72414V4.24894C19.178 4.36022 20.1267 4.63333 20.8236 5.30359C21.5206 5.97385 21.8046 6.88616 21.9203 8.27586L22 9H2.92456H2V8.27586C2.11571 6.88616 2.3997 5.97385 3.09665 5.30359C3.79361 4.63333 4.74226 4.36022 6.1873 4.24894V2.72414C6.1873 2.32421 6.52442 2 6.94028 2Z"
-                                            fill="#9C603B" />
-                                        <path opacity="0.5"
-                                            d="M21.9995 14.0001V12.0001C21.9995 11.161 21.9963 9.66527 21.9834 9H2.00917C1.99626 9.66527 1.99953 11.161 1.99953 12.0001V14.0001C1.99953 17.7713 1.99953 19.6569 3.1711 20.8285C4.34267 22.0001 6.22829 22.0001 9.99953 22.0001H13.9995C17.7708 22.0001 19.6564 22.0001 20.828 20.8285C21.9995 19.6569 21.9995 17.7713 21.9995 14.0001Z"
-                                            fill="#9C603B" />
-                                    </svg>
-                                    <span
-                                        class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Room
-                                        Price & Information</span>
-                                </div>
-                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('occupied') }}">Occupied</a>
                         </li>
 
-
-
-                        <li class="nav-item">
-                                <a class="{{request()->is('/services') ? 'active' : ' ' }}" href="{{('/services') }}" class="group">
-
-                                <div class="flex items-center">
-
-                                    <svg class="group-hover:!text-primary" width="20" height="20"
-                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6.94028 2C7.35614 2 7.69326 2.32421 7.69326 2.72414V4.18487C8.36117 4.17241 9.10983 4.17241 9.95219 4.17241H13.9681C14.8104 4.17241 15.5591 4.17241 16.227 4.18487V2.72414C16.227 2.32421 16.5641 2 16.98 2C17.3958 2 17.733 2.32421 17.733 2.72414V4.24894C19.178 4.36022 20.1267 4.63333 20.8236 5.30359C21.5206 5.97385 21.8046 6.88616 21.9203 8.27586L22 9H2.92456H2V8.27586C2.11571 6.88616 2.3997 5.97385 3.09665 5.30359C3.79361 4.63333 4.74226 4.36022 6.1873 4.24894V2.72414C6.1873 2.32421 6.52442 2 6.94028 2Z"
-                                            fill="#9C603B" />
-                                        <path opacity="0.5"
-                                            d="M21.9995 14.0001V12.0001C21.9995 11.161 21.9963 9.66527 21.9834 9H2.00917C1.99626 9.66527 1.99953 11.161 1.99953 12.0001V14.0001C1.99953 17.7713 1.99953 19.6569 3.1711 20.8285C4.34267 22.0001 6.22829 22.0001 9.99953 22.0001H13.9995C17.7708 22.0001 19.6564 22.0001 20.828 20.8285C21.9995 19.6569 21.9995 17.7713 21.9995 14.0001Z"
-                                            fill="#9C603B" />
-                                    </svg>
-                                    <span
-                                        class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Room
-                                        Services</span>
-                                </div>
-                            </a>
+                        <li>
+                            <a href="{{ url('check-out-bookings') }}">Check-Out Bookings</a>
                         </li>
-
-
-                        <li class="nav-item">
-                                <a class="{{request()->is('/housekeeping') ? 'active' : ' ' }}" href="{{('/housekeeping') }}" class="group">
-
-                                <div class="flex items-center">
-
-                                    <svg class="group-hover:!text-primary" width="20" height="20"
-                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6.94028 2C7.35614 2 7.69326 2.32421 7.69326 2.72414V4.18487C8.36117 4.17241 9.10983 4.17241 9.95219 4.17241H13.9681C14.8104 4.17241 15.5591 4.17241 16.227 4.18487V2.72414C16.227 2.32421 16.5641 2 16.98 2C17.3958 2 17.733 2.32421 17.733 2.72414V4.24894C19.178 4.36022 20.1267 4.63333 20.8236 5.30359C21.5206 5.97385 21.8046 6.88616 21.9203 8.27586L22 9H2.92456H2V8.27586C2.11571 6.88616 2.3997 5.97385 3.09665 5.30359C3.79361 4.63333 4.74226 4.36022 6.1873 4.24894V2.72414C6.1873 2.32421 6.52442 2 6.94028 2Z"
-                                            fill="#9C603B" />
-                                        <path opacity="0.5"
-                                            d="M21.9995 14.0001V12.0001C21.9995 11.161 21.9963 9.66527 21.9834 9H2.00917C1.99626 9.66527 1.99953 11.161 1.99953 12.0001V14.0001C1.99953 17.7713 1.99953 19.6569 3.1711 20.8285C4.34267 22.0001 6.22829 22.0001 9.99953 22.0001H13.9995C17.7708 22.0001 19.6564 22.0001 20.828 20.8285C21.9995 19.6569 21.9995 17.7713 21.9995 14.0001Z"
-                                            fill="#9C603B" />
-                                    </svg>
-                                    <span
-                                        class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Housekeeping</span>
-                                </div>
-                            </a>
+                        <li>
+                            <a href="{{ url('add-booking') }}">Add Booking</a>
                         </li>
-
-
-                       
+                        <li>
+                            <a href="/apps/invoice/edit">All Bookings</a>
+                        </li>
                     </ul>
                 </li>
+
+
+
+
+                <h2
+                    class="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
+
+                    <svg class="w-4 h-5 flex-none hidden" viewBox="0 0 24 24" stroke="#9C603B" stroke-width="1.5"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <span>Room Management</span>
+                </h2>
+
+                <li class="nav-item">
+                    <a class="{{ request()->is('/room-ds') ? 'active' : ' ' }}" href="{{ '/room-ds' }}"
+                        class="group">
+
+                        <div class="flex items-center">
+
+                            <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.94028 2C7.35614 2 7.69326 2.32421 7.69326 2.72414V4.18487C8.36117 4.17241 9.10983 4.17241 9.95219 4.17241H13.9681C14.8104 4.17241 15.5591 4.17241 16.227 4.18487V2.72414C16.227 2.32421 16.5641 2 16.98 2C17.3958 2 17.733 2.32421 17.733 2.72414V4.24894C19.178 4.36022 20.1267 4.63333 20.8236 5.30359C21.5206 5.97385 21.8046 6.88616 21.9203 8.27586L22 9H2.92456H2V8.27586C2.11571 6.88616 2.3997 5.97385 3.09665 5.30359C3.79361 4.63333 4.74226 4.36022 6.1873 4.24894V2.72414C6.1873 2.32421 6.52442 2 6.94028 2Z"
+                                    fill="#9C603B" />
+                                <path opacity="0.5"
+                                    d="M21.9995 14.0001V12.0001C21.9995 11.161 21.9963 9.66527 21.9834 9H2.00917C1.99626 9.66527 1.99953 11.161 1.99953 12.0001V14.0001C1.99953 17.7713 1.99953 19.6569 3.1711 20.8285C4.34267 22.0001 6.22829 22.0001 9.99953 22.0001H13.9995C17.7708 22.0001 19.6564 22.0001 20.828 20.8285C21.9995 19.6569 21.9995 17.7713 21.9995 14.0001Z"
+                                    fill="#9C603B" />
+                            </svg>
+                            <span
+                                class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Room
+                                Price & Information</span>
+                        </div>
+                    </a>
+                </li>
+                <h2
+                class="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
+
+                <svg class="w-4 h-5 flex-none hidden" viewBox="0 0 24 24" stroke="#9C603B" stroke-width="1.5"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Booking </span>
+            </h2>
+
+            <li class="nav-item">
+                <a class="{{ request()->is('/booking-details') ? 'active' : ' ' }}" href="{{ '/booking-details' }}"
+                    class="group">
+
+                    <div class="flex items-center">
+
+                        <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.94028 2C7.35614 2 7.69326 2.32421 7.69326 2.72414V4.18487C8.36117 4.17241 9.10983 4.17241 9.95219 4.17241H13.9681C14.8104 4.17241 15.5591 4.17241 16.227 4.18487V2.72414C16.227 2.32421 16.5641 2 16.98 2C17.3958 2 17.733 2.32421 17.733 2.72414V4.24894C19.178 4.36022 20.1267 4.63333 20.8236 5.30359C21.5206 5.97385 21.8046 6.88616 21.9203 8.27586L22 9H2.92456H2V8.27586C2.11571 6.88616 2.3997 5.97385 3.09665 5.30359C3.79361 4.63333 4.74226 4.36022 6.1873 4.24894V2.72414C6.1873 2.32421 6.52442 2 6.94028 2Z"
+                                fill="#9C603B" />
+                            <path opacity="0.5"
+                                d="M21.9995 14.0001V12.0001C21.9995 11.161 21.9963 9.66527 21.9834 9H2.00917C1.99626 9.66527 1.99953 11.161 1.99953 12.0001V14.0001C1.99953 17.7713 1.99953 19.6569 3.1711 20.8285C4.34267 22.0001 6.22829 22.0001 9.99953 22.0001H13.9995C17.7708 22.0001 19.6564 22.0001 20.828 20.8285C21.9995 19.6569 21.9995 17.7713 21.9995 14.0001Z"
+                                fill="#9C603B" />
+                        </svg>
+                        <span
+                            class="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">Booking Details</span>
+                    </div>
+                </a>
+            </li>
+            </ul>
+            </li>
             </ul>
             </li>
             </ul>

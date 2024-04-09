@@ -71,12 +71,6 @@
                                     <option value="Postal ID">Postal ID</option>
                                 </select>
                             </div>
-                            <div class="mb-4">
-                                <label for="guest_id_no" class="block text-gray-700 font-semibold mb-2">Guest ID
-                                    number</label>
-                                <input type="text" id="guest_id_no" name="id_number" class="form-input w-full"
-                                    required>
-                            </div>
                         </div>
 
                     </div>
@@ -656,11 +650,9 @@
                 const name3Input = document.getElementById('email');
                 const name4Input = document.getElementById('contact');
                 const name5Input = document.getElementById('guestID');
-                const name6Input = document.getElementById('guest_id_no');
                 if (name1Input.value.trim() !== "" && name2Input.value.trim() !== "" && name3Input.value
                     .trim() !== "" && name4Input.value
                     .trim() !== "" && name5Input.value
-                    .trim() !== "" && name6Input.value
                     .trim() !== "") {
 
                     document.getElementById('triggerButton').classList.add('hidden');

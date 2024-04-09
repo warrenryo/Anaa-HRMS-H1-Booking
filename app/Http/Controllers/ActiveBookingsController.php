@@ -10,7 +10,7 @@ class ActiveBookingsController extends Controller
 {
     public function index(){
 
-        $active_bookings = GuestInfo::all();
+        $active_bookings = GuestInfo::where('status', 'Active')->get();
         return view('frontdesk.activebookings', compact('active_bookings'));
     }
 }
